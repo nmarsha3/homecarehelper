@@ -1,0 +1,484 @@
+0010	 Cholera due to vibrio cholerae
+0011	 Cholera due to vibrio cholerae el tor
+0019	 Cholera, unspecified
+0020	 Typhoid fever
+0021	 Paratyphoid fever A
+0022	 Paratyphoid fever B
+0023	 Paratyphoid fever C
+0029	 Paratyphoid fever, unspecified
+0030	 Salmonella gastroenteritis
+0031	 Salmonella septicemia
+00320	Localized salmonella infection, unspecified
+00321	Salmonella meningitis
+00322	Salmonella pneumonia
+00323	Salmonella arthritis
+00324	Salmonella osteomyelitis
+00329	Other localized salmonella infections
+0038	 Other specified salmonella infections
+0039	 Salmonella infection, unspecified
+0040	 Shigella dysenteriae
+0041	 Shigella flexneri
+0042	 Shigella boydii
+0043	 Shigella sonnei
+0048	 Other specified shigella infections
+0049	 Shigellosis, unspecified
+0050	 Staphylococcal food poisoning
+0051	 Botulism food poisoning
+0052	 Food poisoning due to Clostridium perfringens (C. welchii)
+0053	 Food poisoning due to other Clostridia
+0054	 Food poisoning due to Vibrio parahaemolyticus
+00581	Food poisoning due to Vibrio vulnificus
+00589	Other bacterial food poisoning
+0059	 Food poisoning, unspecified
+0060	 Acute amebic dysentery without mention of abscess
+0061	 Chronic intestinal amebiasis without mention of abscess
+0062	 Amebic nondysenteric colitis
+0063	 Amebic liver abscess
+0064	 Amebic lung abscess
+0065	 Amebic brain abscess
+0066	 Amebic skin ulceration
+0068	 Amebic infection of other sites
+0069	 Amebiasis, unspecified
+0070	 Balantidiasis
+0071	 Giardiasis
+0072	 Coccidiosis
+0073	 Intestinal trichomoniasis
+0074	 Cryptosporidiosis
+0075	 Cyclosporiasis
+0078	 Other specified protozoal intestinal diseases
+0079	 Unspecified protozoal intestinal disease
+00800	Intestinal infection due to E. coli, unspecified
+00801	Intestinal infection due to enteropathogenic E. coli
+00802	Intestinal infection due to enterotoxigenic E. coli
+00803	Intestinal infection due to enteroinvasive E. coli
+00804	Intestinal infection due to enterohemorrhagic E. coli
+00809	Intestinal infection due to other intestinal E. coli infections
+0081	 Intestinal infection due to arizona group of paracolon bacilli
+0082	 Intestinal infection due to aerobacter aerogenes
+0083	 Intestinal infection due to proteus (mirabilis) (morganii)
+00841	Intestinal infection due to staphylococcus
+00842	Intestinal infection due to pseudomonas
+00843	Intestinal infection due to campylobacter
+00844	Intestinal infection due to yersinia enterocolitica
+00845	Intestinal infection due to Clostridium difficile
+00846	Intestinal infection due to other anaerobes
+00847	Intestinal infection due to other gram-negative bacteria
+00849	Intestinal infection due to other organisms
+0085	 Bacterial enteritis, unspecified
+00861	Enteritis due to rotavirus
+00862	Enteritis due to adenovirus
+00863	Enteritis due to norwalk virus
+00864	Enteritis due to other small round viruses [SRV's]
+00865	Enteritis due to calicivirus
+00866	Enteritis due to astrovirus
+00867	Enteritis due to enterovirus nec
+00869	Enteritis due to other viral enteritis
+0088	 Intestinal infection due to other organism, not elsewhere classified
+0090	 Infectious colitis, enteritis, and gastroenteritis
+0091	 Colitis, enteritis, and gastroenteritis of presumed infectious origin
+0092	 Infectious diarrhea
+0093	 Diarrhea of presumed infectious origin
+01000	Primary tuberculous infection, unspecified
+01001	Primary tuberculous infection, bacteriological or histological examination not done
+01002	Primary tuberculous infection, bacteriological or histological examination unknown (at present)
+01003	Primary tuberculous infection, tubercle bacilli found (in sputum) by microscopy
+01004	Primary tuberculous infection, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01005	Primary tuberculous infection, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01006	Primary tuberculous infection, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01010	Tuberculous pleurisy in primary progressive tuberculosis, unspecified
+01011	Tuberculous pleurisy in primary progressive tuberculosis, bacteriological or histological examination not done
+01012	Tuberculous pleurisy in primary progressive tuberculosis, bacteriological or histological examination unknown (at present)
+01013	Tuberculous pleurisy in primary progressive tuberculosis, tubercle bacilli found (in sputum) by microscopy
+01014	Tuberculous pleurisy in primary progressive tuberculosis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01015	Tuberculous pleurisy in primary progressive tuberculosis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01016	Tuberculous pleurisy in primary progressive tuberculosis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01080	Other primary progressive tuberculosis, unspecified
+01081	Other primary progressive tuberculosis, bacteriological or histological examination not done
+01082	Other primary progressive tuberculosis, bacteriological or histological examination unknown (at present)
+01083	Other primary progressive tuberculosis, tubercle bacilli found (in sputum) by microscopy
+01084	Other primary progressive tuberculosis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01085	Other primary progressive tuberculosis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01086	Other primary progressive tuberculosis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01090	Primary tuberculous infection, unspecified, unspecified
+01091	Primary tuberculous infection, unspecified, bacteriological or histological examination not done
+01092	Primary tuberculous infection, unspecified, bacteriological or histological examination unknown (at present)
+01093	Primary tuberculous infection, unspecified, tubercle bacilli found (in sputum) by microscopy
+01094	Primary tuberculous infection, unspecified, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01095	Primary tuberculous infection, unspecified, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01096	Primary tuberculous infection, unspecified, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01100	Tuberculosis of lung, infiltrative, unspecified
+01101	Tuberculosis of lung, infiltrative, bacteriological or histological examination not done
+01102	Tuberculosis of lung, infiltrative, bacteriological or histological examination unknown (at present)
+01103	Tuberculosis of lung, infiltrative, tubercle bacilli found (in sputum) by microscopy
+01104	Tuberculosis of lung, infiltrative, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01105	Tuberculosis of lung, infiltrative, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01106	Tuberculosis of lung, infiltrative, tubercle bacilli not found bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01110	Tuberculosis of lung, nodular, unspecified
+01111	Tuberculosis of lung, nodular, bacteriological or histological examination not done
+01112	Tuberculosis of lung, nodular, bacteriological or histological examination unknown (at present)
+01113	Tuberculosis of lung, nodular, tubercle bacilli found (in sputum) by microscopy
+01114	Tuberculosis of lung, nodular, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01115	Tuberculosis of lung, nodular, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01116	Tuberculosis of lung, nodular, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01120	Tuberculosis of lung with cavitation, unspecified
+01121	Tuberculosis of lung with cavitation, bacteriological or histological examination not done
+01122	Tuberculosis of lung with cavitation, bacteriological or histological examination unknown (at present)
+01123	Tuberculosis of lung with cavitation, tubercle bacilli found (in sputum) by microscopy
+01124	Tuberculosis of lung with cavitation, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01125	Tuberculosis of lung with cavitation, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01126	Tuberculosis of lung with cavitation, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01130	Tuberculosis of bronchus, unspecified
+01131	Tuberculosis of bronchus, bacteriological or histological examination not done
+01132	Tuberculosis of bronchus, bacteriological or histological examination unknown (at present)
+01133	Tuberculosis of bronchus, tubercle bacilli found (in sputum) by microscopy
+01134	Tuberculosis of bronchus, tubercle bacilli not found (in sputum) by microscopy, but found in bacterial culture
+01135	Tuberculosis of bronchus, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01136	Tuberculosis of bronchus, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01140	Tuberculous fibrosis of lung, unspecified
+01141	Tuberculous fibrosis of lung, bacteriological or histological examination not done
+01142	Tuberculous fibrosis of lung, bacteriological or histological examination unknown (at present)
+01143	Tuberculous fibrosis of lung, tubercle bacilli found (in sputum) by microscopy
+01144	Tuberculous fibrosis of lung, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01145	Tuberculous fibrosis of lung, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01146	Tuberculous fibrosis of lung, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01150	Tuberculous bronchiectasis, unspecified
+01151	Tuberculous bronchiectasis, bacteriological or histological examination not done
+01152	Tuberculous bronchiectasis, bacteriological or histological examination unknown (at present)
+01153	Tuberculous bronchiectasis, tubercle bacilli found (in sputum) by microscopy
+01154	Tuberculous bronchiectasis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01155	Tuberculous bronchiectasis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01156	Tuberculous bronchiectasis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01160	Tuberculous pneumonia [any form], unspecified
+01161	Tuberculous pneumonia [any form], bacteriological or histological examination not done
+01162	Tuberculous pneumonia [any form], bacteriological or histological examination unknown (at present)
+01163	Tuberculous pneumonia [any form], tubercle bacilli found (in sputum) by microscopy
+01164	Tuberculous pneumonia [any form], tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01165	Tuberculous pneumonia [any form], tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01166	Tuberculous pneumonia [any form], tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01170	Tuberculous pneumothorax, unspecified
+01171	Tuberculous pneumothorax, bacteriological or histological examination not done
+01172	Tuberculous pneumothorax, bacteriological or histological examination unknown (at present)
+01173	Tuberculous pneumothorax, tubercle bacilli found (in sputum) by microscopy
+01174	Tuberculous pneumothorax, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01175	Tuberculous pneumothorax, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01176	Tuberculous pneumothorax, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01180	Other specified pulmonary tuberculosis, unspecified
+01181	Other specified pulmonary tuberculosis, bacteriological or histological examination not done
+01182	Other specified pulmonary tuberculosis, bacteriological or histological examination unknown (at present)
+01183	Other specified pulmonary tuberculosis, tubercle bacilli found (in sputum) by microscopy
+01184	Other specified pulmonary tuberculosis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01185	Other specified pulmonary tuberculosis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01186	Other specified pulmonary tuberculosis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01190	Pulmonary tuberculosis, unspecified, unspecified
+01191	Pulmonary tuberculosis, unspecified, bacteriological or histological examination not done
+01192	Pulmonary tuberculosis, unspecified, bacteriological or histological examination unknown (at present)
+01193	Pulmonary tuberculosis, unspecified, tubercle bacilli found (in sputum) by microscopy
+01194	Pulmonary tuberculosis, unspecified, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01195	Pulmonary tuberculosis, unspecified, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01196	Pulmonary tuberculosis, unspecified, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01200	Tuberculous pleurisy, unspecified
+01201	Tuberculous pleurisy, bacteriological or histological examination not done
+01202	Tuberculous pleurisy, bacteriological or histological examination unknown (at present)
+01203	Tuberculous pleurisy, tubercle bacilli found (in sputum) by microscopy
+01204	Tuberculous pleurisy, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01205	Tuberculous pleurisy, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01206	Tuberculous pleurisy, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01210	Tuberculosis of intrathoracic lymph nodes, unspecified
+01211	Tuberculosis of intrathoracic lymph nodes, bacteriological or histological examination not done
+01212	Tuberculosis of intrathoracic lymph nodes, bacteriological or histological examination unknown (at present)
+01213	Tuberculosis of intrathoracic lymph nodes, tubercle bacilli found (in sputum) by microscopy
+01214	Tuberculosis of intrathoracic lymph nodes, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01215	Tuberculosis of intrathoracic lymph nodes, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01216	Tuberculosis of intrathoracic lymph nodes, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01220	Isolated tracheal or bronchial tuberculosis, unspecified
+01221	Isolated tracheal or bronchial tuberculosis, bacteriological or histological examination not done
+01222	Isolated tracheal or bronchial tuberculosis, bacteriological or histological examination unknown (at present)
+01223	Isolated tracheal or bronchial tuberculosis, tubercle bacilli found (in sputum) by microscopy
+01224	Isolated tracheal or bronchial tuberculosis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01225	Isolated tracheal or bronchial tuberculosis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01226	Isolated tracheal or bronchial tuberculosis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01230	Tuberculous laryngitis, unspecified
+01231	Tuberculous laryngitis, bacteriological or histological examination not done
+01232	Tuberculous laryngitis, bacteriological or histological examination unknown (at present)
+01233	Tuberculous laryngitis, tubercle bacilli found (in sputum) by microscopy
+01234	Tuberculous laryngitis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01235	Tuberculous laryngitis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01236	Tuberculous laryngitis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01280	Other specified respiratory tuberculosis, unspecified
+01281	Other specified respiratory tuberculosis, bacteriological or histological examination not done
+01282	Other specified respiratory tuberculosis, bacteriological or histological examination unknown (at present)
+01283	Other specified respiratory tuberculosis, tubercle bacilli found (in sputum) by microscopy
+01284	Other specified respiratory tuberculosis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01285	Other specified respiratory tuberculosis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01286	Other specified respiratory tuberculosis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01300	Tuberculous meningitis, unspecified
+01301	Tuberculous meningitis, bacteriological or histological examination not done
+01302	Tuberculous meningitis, bacteriological or histological examination unknown (at present)
+01303	Tuberculous meningitis, tubercle bacilli found (in sputum) by microscopy
+01304	Tuberculous meningitis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01305	Tuberculous meningitis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01306	Tuberculous meningitis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01310	Tuberculoma of meninges, unspecified
+01311	Tuberculoma of meninges, bacteriological or histological examination not done
+01312	Tuberculoma of meninges, bacteriological or histological examination unknown (at present)
+01313	Tuberculoma of meninges, tubercle bacilli found (in sputum) by microscopy
+01314	Tuberculoma of meninges, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01315	Tuberculoma of meninges, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01316	Tuberculoma of meninges, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01320	Tuberculoma of brain, unspecified
+01321	Tuberculoma of brain, bacteriological or histological examination not done
+01322	Tuberculoma of brain, bacteriological or histological examination unknown (at present)
+01323	Tuberculoma of brain, tubercle bacilli found (in sputum) by microscopy
+01324	Tuberculoma of brain, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01325	Tuberculoma of brain, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01326	Tuberculoma of brain, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01330	Tuberculous abscess of brain, unspecified
+01331	Tuberculous abscess of brain, bacteriological or histological examination not done
+01332	Tuberculous abscess of brain, bacteriological or histological examination unknown (at present)
+01333	Tuberculous abscess of brain, tubercle bacilli found (in sputum) by microscopy
+01334	Tuberculous abscess of brain, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01335	Tuberculous abscess of brain, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01336	Tuberculous abscess of brain, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01340	Tuberculoma of spinal cord, unspecified
+01341	Tuberculoma of spinal cord, bacteriological or histological examination not done
+01342	Tuberculoma of spinal cord, bacteriological or histological examination unknown (at present)
+01343	Tuberculoma of spinal cord, tubercle bacilli found (in sputum) by microscopy
+01344	Tuberculoma of spinal cord, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01345	Tuberculoma of spinal cord, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01346	Tuberculoma of spinal cord, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01350	Tuberculous abscess of spinal cord, unspecified
+01351	Tuberculous abscess of spinal cord, bacteriological or histological examination not done
+01352	Tuberculous abscess of spinal cord, bacteriological or histological examination unknown (at present)
+01353	Tuberculous abscess of spinal cord, tubercle bacilli found (in sputum) by microscopy
+01354	Tuberculous abscess of spinal cord, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01355	Tuberculous abscess of spinal cord, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01356	Tuberculous abscess of spinal cord, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01360	Tuberculous encephalitis or myelitis, unspecified
+01361	Tuberculous encephalitis or myelitis, bacteriological or histological examination not done
+01362	Tuberculous encephalitis or myelitis, bacteriological or histological examination unknown (at present)
+01363	Tuberculous encephalitis or myelitis, tubercle bacilli found (in sputum) by microscopy
+01364	Tuberculous encephalitis or myelitis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01365	Tuberculous encephalitis or myelitis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01366	Tuberculous encephalitis or myelitis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01380	Other specified tuberculosis of central nervous system, unspecified
+01381	Other specified tuberculosis of central nervous system, bacteriological or histological examination not done
+01382	Other specified tuberculosis of central nervous system, bacteriological or histological examination unknown (at present)
+01383	Other specified tuberculosis of central nervous system, tubercle bacilli found (in sputum) by microscopy
+01384	Other specified tuberculosis of central nervous system, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01385	Other specified tuberculosis of central nervous system, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01386	Other specified tuberculosis of central nervous system, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01390	Unspecified tuberculosis of central nervous system, unspecified
+01391	Unspecified tuberculosis of central nervous system, bacteriological or histological examination not done
+01392	Unspecified tuberculosis of central nervous system, bacteriological or histological examination unknown (at present)
+01393	Unspecified tuberculosis of central nervous system, tubercle bacilli found (in sputum) by microscopy
+01394	Unspecified tuberculosis of central nervous system, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01395	Unspecified tuberculosis of central nervous system, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01396	Unspecified tuberculosis of central nervous system, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01400	Tuberculous peritonitis, unspecified
+01401	Tuberculous peritonitis, bacteriological or histological examination not done
+01402	Tuberculous peritonitis, bacteriological or histological examination unknown (at present)
+01403	Tuberculous peritonitis, tubercle bacilli found (in sputum) by microscopy
+01404	Tuberculous peritonitis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01405	Tuberculous peritonitis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01406	Tuberculous peritonitis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01480	Other tuberculosis of intestines, peritoneum, and mesenteric glands, unspecified
+01481	Other tuberculosis of intestines, peritoneum, and mesenteric glands, bacteriological or histological examination not done
+01482	Other tuberculosis of intestines, peritoneum, and mesenteric glands, bacteriological or histological examination unknown (at present)
+01483	Other tuberculosis of intestines, peritoneum, and mesenteric glands, tubercle bacilli found (in sputum) by microscopy
+01484	Other tuberculosis of intestines, peritoneum, and mesenteric glands, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01485	Other tuberculosis of intestines, peritoneum, and mesenteric glands, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01486	Other tuberculosis of intestines, peritoneum, and mesenteric glands, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01500	Tuberculosis of vertebral column, unspecified
+01501	Tuberculosis of vertebral column, bacteriological or histological examination not done
+01502	Tuberculosis of vertebral column, bacteriological or histological examination unknown (at present)
+01503	Tuberculosis of vertebral column, tubercle bacilli found (in sputum) by microscopy
+01504	Tuberculosis of vertebral column, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01505	Tuberculosis of vertebral column, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01506	Tuberculosis of vertebral column, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01510	Tuberculosis of hip, unspecified
+01511	Tuberculosis of hip, bacteriological or histological examination not done
+01512	Tuberculosis of hip, bacteriological or histological examination unknown (at present)
+01513	Tuberculosis of hip, tubercle bacilli found (in sputum) by microscopy
+01514	Tuberculosis of hip, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01515	Tuberculosis of hip, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01516	Tuberculosis of hip, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01520	Tuberculosis of knee, unspecified
+01521	Tuberculosis of knee, bacteriological or histological examination not done
+01522	Tuberculosis of knee, bacteriological or histological examination unknown (at present)
+01523	Tuberculosis of knee, tubercle bacilli found (in sputum) by microscopy
+01524	Tuberculosis of knee, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01525	Tuberculosis of knee, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01526	Tuberculosis of knee, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01550	Tuberculosis of limb bones, unspecified
+01551	Tuberculosis of limb bones, bacteriological or histological examination not done
+01552	Tuberculosis of limb bones, bacteriological or histological examination unknown (at present)
+01553	Tuberculosis of limb bones, tubercle bacilli found (in sputum) by microscopy
+01554	Tuberculosis of limb bones, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01555	Tuberculosis of limb bones, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01556	Tuberculosis of limb bones, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01560	Tuberculosis of mastoid, unspecified
+01561	Tuberculosis of mastoid, bacteriological or histological examination not done
+01562	Tuberculosis of mastoid, bacteriological or histological examination unknown (at present)
+01563	Tuberculosis of mastoid, tubercle bacilli found (in sputum) by microscopy
+01564	Tuberculosis of mastoid, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01565	Tuberculosis of mastoid, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01566	Tuberculosis of mastoid, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01570	Tuberculosis of other specified bone, unspecified
+01571	Tuberculosis of other specified bone, bacteriological or histological examination not done
+01572	Tuberculosis of other specified bone, bacteriological or histological examination unknown (at present)
+01573	Tuberculosis of other specified bone, tubercle bacilli found (in sputum) by microscopy
+01574	Tuberculosis of other specified bone, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01575	Tuberculosis of other specified bone, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01576	Tuberculosis of other specified bone, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01580	Tuberculosis of other specified joint, unspecified
+01581	Tuberculosis of other specified joint, bacteriological or histological examination not done
+01582	Tuberculosis of other specified joint, bacteriological or histological examination unknown (at present)
+01583	Tuberculosis of other specified joint, tubercle bacilli found (in sputum) by microscopy
+01584	Tuberculosis of other specified joint, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01585	Tuberculosis of other specified joint, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01586	Tuberculosis of other specified joint, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01590	Tuberculosis of unspecified bones and joints, unspecified
+01591	Tuberculosis of unspecified bones and joints, bacteriological or histological examination not done
+01592	Tuberculosis of unspecified bones and joints, bacteriological or histological examination unknown (at present)
+01593	Tuberculosis of unspecified bones and joints, tubercle bacilli found (in sputum) by microscopy
+01594	Tuberculosis of unspecified bones and joints, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01595	Tuberculosis of unspecified bones and joints, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01596	Tuberculosis of unspecified bones and joints, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01600	Tuberculosis of kidney, unspecified
+01601	Tuberculosis of kidney, bacteriological or histological examination not done
+01602	Tuberculosis of kidney, bacteriological or histological examination unknown (at present)
+01603	Tuberculosis of kidney, tubercle bacilli found (in sputum) by microscopy
+01604	Tuberculosis of kidney, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01605	Tuberculosis of kidney, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01606	Tuberculosis of kidney, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01610	Tuberculosis of bladder, unspecified
+01611	Tuberculosis of bladder, bacteriological or histological examination not done
+01612	Tuberculosis of bladder, bacteriological or histological examination unknown (at present)
+01613	Tuberculosis of bladder, tubercle bacilli found (in sputum) by microscopy
+01614	Tuberculosis of bladder, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01615	Tuberculosis of bladder, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01616	Tuberculosis of bladder, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01620	Tuberculosis of ureter, unspecified
+01621	Tuberculosis of ureter, bacteriological or histological examination not done
+01622	Tuberculosis of ureter, bacteriological or histological examination unknown (at present)
+01623	Tuberculosis of ureter, tubercle bacilli found (in sputum) by microscopy
+01624	Tuberculosis of ureter, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01625	Tuberculosis of ureter, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01626	Tuberculosis of ureter, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01630	Tuberculosis of other urinary organs, unspecified
+01631	Tuberculosis of other urinary organs, bacteriological or histological examination not done
+01632	Tuberculosis of other urinary organs, bacteriological or histological examination unknown (at present)
+01633	Tuberculosis of other urinary organs, tubercle bacilli found (in sputum) by microscopy
+01634	Tuberculosis of other urinary organs, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01635	Tuberculosis of other urinary organs, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01636	Tuberculosis of other urinary organs, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01640	Tuberculosis of epididymis, unspecified
+01641	Tuberculosis of epididymis, bacteriological or histological examination not done
+01642	Tuberculosis of epididymis, bacteriological or histological examination unknown (at present)
+01643	Tuberculosis of epididymis, tubercle bacilli found (in sputum) by microscopy
+01644	Tuberculosis of epididymis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01645	Tuberculosis of epididymis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01646	Tuberculosis of epididymis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01650	Tuberculosis of other male genital organs, unspecified
+01651	Tuberculosis of other male genital organs, bacteriological or histological examination not done
+01652	Tuberculosis of other male genital organs, bacteriological or histological examination unknown (at present)
+01653	Tuberculosis of other male genital organs, tubercle bacilli found (in sputum) by microscopy
+01654	Tuberculosis of other male genital organs, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01655	Tuberculosis of other male genital organs, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01656	Tuberculosis of other male genital organs, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01660	Tuberculous oophoritis and salpingitis, unspecified
+01661	Tuberculous oophoritis and salpingitis, bacteriological or histological examination not done
+01662	Tuberculous oophoritis and salpingitis, bacteriological or histological examination unknown (at present)
+01663	Tuberculous oophoritis and salpingitis, tubercle bacilli found (in sputum) by microscopy
+01664	Tuberculous oophoritis and salpingitis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01665	Tuberculous oophoritis and salpingitis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01666	Tuberculous oophoritis and salpingitis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01670	Tuberculosis of other female genital organs, unspecified
+01671	Tuberculosis of other female genital organs, bacteriological or histological examination not done
+01672	Tuberculosis of other female genital organs, bacteriological or histological examination unknown (at present)
+01673	Tuberculosis of other female genital organs, tubercle bacilli found (in sputum) by microscopy
+01674	Tuberculosis of other female genital organs, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01675	Tuberculosis of other female genital organs, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01676	Tuberculosis of other female genital organs, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01690	Genitourinary tuberculosis, unspecified, unspecified
+01691	Genitourinary tuberculosis, unspecified, bacteriological or histological examination not done
+01692	Genitourinary tuberculosis, unspecified, bacteriological or histological examination unknown (at present)
+01693	Genitourinary tuberculosis, unspecified, tubercle bacilli found (in sputum) by microscopy
+01694	Genitourinary tuberculosis, unspecified, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01695	Genitourinary tuberculosis, unspecified, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01696	Genitourinary tuberculosis, unspecified, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01700	Tuberculosis of skin and subcutaneous cellular tissue, unspecified
+01701	Tuberculosis of skin and subcutaneous cellular tissue, bacteriological or histological examination not done
+01702	Tuberculosis of skin and subcutaneous cellular tissue, bacteriological or histological examination unknown (at present)
+01703	Tuberculosis of skin and subcutaneous cellular tissue, tubercle bacilli found (in sputum) by microscopy
+01704	Tuberculosis of skin and subcutaneous cellular tissue, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01705	Tuberculosis of skin and subcutaneous cellular tissue, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01706	Tuberculosis of skin and subcutaneous cellular tissue, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01710	Erythema nodosum with hypersensitivity reaction in tuberculosis, unspecified
+01711	Erythema nodosum with hypersensitivity reaction in tuberculosis, bacteriological or histological examination not done
+01712	Erythema nodosum with hypersensitivity reaction in tuberculosis, bacteriological or histological examination unknown (at present)
+01713	Erythema nodosum with hypersensitivity reaction in tuberculosis, tubercle bacilli found (in sputum) by microscopy
+01714	Erythema nodosum with hypersensitivity reaction in tuberculosis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01715	Erythema nodosum with hypersensitivity reaction in tuberculosis, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01716	Erythema nodosum with hypersensitivity reaction in tuberculosis, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01720	Tuberculosis of peripheral lymph nodes, unspecified
+01721	Tuberculosis of peripheral lymph nodes, bacteriological or histological examination not done
+01722	Tuberculosis of peripheral lymph nodes, bacteriological or histological examination unknown (at present)
+01723	Tuberculosis of peripheral lymph nodes, tubercle bacilli found (in sputum) by microscopy
+01724	Tuberculosis of peripheral lymph nodes, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01725	Tuberculosis of peripheral lymph nodes, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01726	Tuberculosis of peripheral lymph nodes, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01730	Tuberculosis of eye, unspecified
+01731	Tuberculosis of eye, bacteriological or histological examination not done
+01732	Tuberculosis of eye, bacteriological or histological examination unknown (at present)
+01733	Tuberculosis of eye, tubercle bacilli found (in sputum) by microscopy
+01734	Tuberculosis of eye, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01735	Tuberculosis of eye, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01736	Tuberculosis of eye, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01740	Tuberculosis of ear, unspecified
+01741	Tuberculosis of ear, bacteriological or histological examination not done
+01742	Tuberculosis of ear, bacteriological or histological examination unknown (at present)
+01743	Tuberculosis of ear, tubercle bacilli found (in sputum) by microscopy
+01744	Tuberculosis of ear, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01745	Tuberculosis of ear, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01746	Tuberculosis of ear, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01750	Tuberculosis of thyroid gland, unspecified
+01751	Tuberculosis of thyroid gland, bacteriological or histological examination not done
+01752	Tuberculosis of thyroid gland, bacteriological or histological examination unknown (at present)
+01753	Tuberculosis of thyroid gland, tubercle bacilli found (in sputum) by microscopy
+01754	Tuberculosis of thyroid gland, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01755	Tuberculosis of thyroid gland, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01756	Tuberculosis of thyroid gland, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01760	Tuberculosis of adrenal glands, unspecified
+01761	Tuberculosis of adrenal glands, bacteriological or histological examination not done
+01762	Tuberculosis of adrenal glands, bacteriological or histological examination unknown (at present)
+01763	Tuberculosis of adrenal glands, tubercle bacilli found (in sputum) by microscopy
+01764	Tuberculosis of adrenal glands, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01765	Tuberculosis of adrenal glands, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01766	Tuberculosis of adrenal glands, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01770	Tuberculosis of spleen, unspecified
+01771	Tuberculosis of spleen, bacteriological or histological examination not done
+01772	Tuberculosis of spleen, bacteriological or histological examination unknown (at present)
+01773	Tuberculosis of spleen, tubercle bacilli found (in sputum) by microscopy
+01774	Tuberculosis of spleen, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01775	Tuberculosis of spleen, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01776	Tuberculosis of spleen, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01780	Tuberculosis of esophagus, unspecified
+01781	Tuberculosis of esophagus, bacteriological or histological examination not done
+01782	Tuberculosis of esophagus, bacteriological or histological examination unknown (at present)
+01783	Tuberculosis of esophagus, tubercle bacilli found (in sputum) by microscopy
+01784	Tuberculosis of esophagus, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01785	Tuberculosis of esophagus, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01786	Tuberculosis of esophagus, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01790	Tuberculosis of other specified organs, unspecified
+01791	Tuberculosis of other specified organs, bacteriological or histological examination not done
+01792	Tuberculosis of other specified organs, bacteriological or histological examination unknown (at present)
+01793	Tuberculosis of other specified organs, tubercle bacilli found (in sputum) by microscopy
+01794	Tuberculosis of other specified organs, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
+01795	Tuberculosis of other specified organs, tubercle bacilli not found by bacteriological examination, but tuberculosis confirmed histologically
+01796	Tuberculosis of other specified organs, tubercle bacilli not found by bacteriological or histological examination, but tuberculosis confirmed by other methods [inoculation of animals]
+01800	Acute miliary tuberculosis, unspecified
+01801	Acute miliary tuberculosis, bacteriological or histological examination not done
+01802	Acute miliary tuberculosis, bacteriological or histological examination unknown (at present)
+01803	Acute miliary tuberculosis, tubercle bacilli found (in sputum) by microscopy
+01804	Acute miliary tuberculosis, tubercle bacilli not found (in sputum) by microscopy, but found by bacterial culture
