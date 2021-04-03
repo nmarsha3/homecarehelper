@@ -17,14 +17,19 @@ function getFormInfo(){
     console.log('entered getFormInfo');
 
     // get username
-    username = document.getElementById('input-username').value;
-    console.log("username = ", username);
+    input_username = document.getElementById('input-username').value;
+    console.log("username = ", input_username);
 
     // get password
-    password = document.getElementById('input-password').value;
-    console.log("password = ", password);
+    input_password = document.getElementById('input-password').value;
+    console.log("password = ", input_password);
 
     // This is where we would add the username and password to a database
+    var request = new XMLHttpRequest();
+    var request_string = "form_handler.php?username=" + input_username + "&password=" + input_password;
+    console.log("request string = ", request_string);
+    request.open("GET", request_string, true);
+    request.send();
 
     // Redirect to our main.html
     window.open("./main.html");
