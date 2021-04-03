@@ -1,0 +1,63 @@
+Allergy and immunology
+Anesthesiology
+Dermatology
+Diagnostic radiology
+Emergency medicine
+Family medicine
+Internal medicine
+Medical genetics
+Neurology
+Nuclear medicine
+Obstetrics and gynecology
+Ophthalmology
+Pathology
+Pediatrics
+Physical medicine and rehabilitation
+Preventive medicine
+Psychiatry
+Radiation oncology
+Surgery
+Urology
+Advanced heart failure and transplant cardiology
+Cardiovascular disease
+Clinical cardiac electrophysiology
+Critical care medicine
+Endocrinology, diabetes, and metabolism
+Gastroenterology
+Geriatric medicine
+Hematology
+Hematology and oncology
+Infectious disease
+Internal medicine
+Interventional cardiology
+Nephrology
+Oncology
+Pediatric internal medicine
+Pulmonary disease
+Pulmonary disease and critical care medicine
+Rheumatology
+Sleep medicine
+Sports medicine
+Transplant hepatology
+Brain injury medicine
+Child neurology
+Clinical neurophysiology
+Endovascular surgical neuroradiology
+Hospice and palliative medicine
+Neurodevelopmental disabilities
+Neuromuscular medicine
+Pain medicine
+Sleep medicine
+Vascular neurology
+Neonatal-perinatal medicine
+Pediatric cardiology
+Pediatric critical care medicine
+Pediatric endocrinology
+Pediatric gastroenterology
+Pediatric hematology-oncology
+Pediatric infectious diseases
+Pediatric nephrology
+Pediatric pulmonology
+Pediatric rheumatology
+Pediatric sports medicine
+Pediatric transplant hepatology
