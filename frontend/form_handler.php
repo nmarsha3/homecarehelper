@@ -1,9 +1,9 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 echo "This is the form handler. username and password inputted: ";
-$username = $_GET["username"];
+$username = $_POST['username'];
 echo $username;
-$password = $_GET["password"];
+$password = $_POST['password'];
 echo $password;
 
 $link = mysqli_connect('localhost', 'mrauch2', 'frc254') or die ('died');
