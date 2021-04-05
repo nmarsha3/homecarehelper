@@ -31,7 +31,7 @@ function getFormInfo(){
     //request.open("GET", request_string, true);
     //request.send();
     $.ajax({
-        url: "./form_handler.php",
+        url: "form_handler.php",
         method: "POST",
         data: {"username": input_username, "password": input_password}
     })
