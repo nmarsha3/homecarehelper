@@ -1,6 +1,6 @@
 console.log('page load - entered login.js');
 
-var submitButton = document.getElementById('submit-button');
+var submitButton = document.getElementById("submit-button");
 submitButton.onmouseup = getFormInfo;
 //var clearButton = document.getElementById('bsr-clear-button');
 //clearButton.onmouseup = clearForm;
