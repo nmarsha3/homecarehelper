@@ -17,11 +17,4 @@ mysqli_stmt_bind_param($stmt, "ss", $username, $password);
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
-echo "We hypothetically inserted into the db\n";
-
-#$stmt = mysqli_prepare($link, "insert into logins (type) values (?)");
-#mysqli_stmt_bind_param($stmt, "i", "Patient");
-#mysqli_stmt_execute($stmt);
-#mysqli_stmt_close($stmt);
-
 ?>
