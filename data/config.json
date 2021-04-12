@@ -1,0 +1,30 @@
+{	
+	"toGenerate" : [
+		{
+			"table_name": "test",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/first_names.txt",
+						"attr": "first_name"
+					},
+					{
+						"file": "data_files/last_names.txt",
+						"attr": "last_name"
+					}
+				],
+			"outfile" : "names.txt",
+			"keys":
+				[
+					"first_name",
+					"last_name"
+
+				],
+			"attributes":
+				[
+
+				],
+			"num" : 10000
+		}
+	]
+}
