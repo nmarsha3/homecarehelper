@@ -1,3 +1,32 @@
+<?php
+
+if (isset($_POST['input-code'])){
+
+$link = mysqli_connect('localhost', 'mrauch2', 'frc254') or die ('died');
+
+mysqli_select_db($link, 'mrauch2');
+
+$stmt = mysqli_prepare($link, "select name from Procedures where code = ?");
+mysqli_stmt_bind_param($stmt, "s", $code);
+mysqli_stmt_execute($stmt);
+mysqli_stmt_bind_result($stmt, $code);
+
+echo "test";
+
+}
+
+
+
+
+
+
+?>
+
+
+
+<p align="center">Code: <?php echo $code; ?>!!</p>
+
+
 <head>
 	<style>
 		body {
@@ -48,11 +77,11 @@
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<form action="lookup.php" method="GET">
-							Procedure Code: <input type="textbox" name="input-code"/>
-                     <input type="submit" value=Submit id="submit-button">
+					<form method="post">
+                                            Procedure Code: <input type="textbox" name="input-code"/>
+                                            <input type="submit" value=Submit id="submit-button">
                   
-                  </form>
+                                        </form>
 					
 					<!DOCTYPE html>
 					<html lang="en">

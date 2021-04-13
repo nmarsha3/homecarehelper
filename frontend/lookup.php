@@ -21,4 +21,6 @@ while(mysqli_stmt_fetch($stmt)){
 }
 echo "</table>\n";
 
+header('Location: lookup.html'); die();
+
 ?>
