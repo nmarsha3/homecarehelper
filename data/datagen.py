@@ -94,6 +94,7 @@ def generateData(attributes, keys, data, num=100, outfile='output.txt'):
 
       # NOTE: only generates a limited number to keep runtime down
       done = False
+      '''
 
       if len(keys) == 1:
          for i in data[keys[0]]:
@@ -131,8 +132,32 @@ def generateData(attributes, keys, data, num=100, outfile='output.txt'):
             if done:
                break
 
+      '''
 
-      # TODO: RANDOM approach?? if we want to avoid only using the first few data points
+      # RANDOM approach if we want to avoid only using the first few data points
+      iterations = 0
+
+      while not done:
+         k = list()
+
+         original_size = len(keyset)
+
+         for key in keys:
+            k.append(str(random.choice(data[key])))
+         k = tuple(k)
+         keyset.add(k)
+
+         if len(keyset) > original_size:
+            iterations = 0
+         else:
+            iterations += 1 # count how many iterations since last addition
+
+         if len(keyset) >= num or iterations > 1000:
+            # quit when enough keys generated or 1000 iterations with no addition
+            done = True
+
+
+
          
       # Loop through key tuples
       for keyTuple in keyset:
@@ -141,7 +166,10 @@ def generateData(attributes, keys, data, num=100, outfile='output.txt'):
          # Generate random non-key elements
          for att in attributes:
             if att not in keys:
-               elem.append(str(random.choice(data[att])))
+               if att in data:
+                  elem.append(str(random.choice(data[att])))
+               else:
+                  elem.append("")
 
          outFile.write('\t'.join(elem) + '\n')
          
@@ -169,9 +197,8 @@ def main():
 
       outfile = t['outfile']
 
+      generateData(t['attributes'], t['keys'], data, t['num'], outfile)
 
-   # Generate new data
-   generateData(t['attributes'], t['keys'], data, t['num'], outfile)
 
 
    # Random test data, but this is the format we're going for:

@@ -1,7 +1,7 @@
 {	
 	"toGenerate" : [
 		{
-			"table_name": "test",
+			"table_name": "full_names",
 			"infiles" : 
 				[
 					{
@@ -13,7 +13,7 @@
 						"attr": "last_name"
 					}
 				],
-			"outfile" : "names.txt",
+			"outfile" : "data_files/full_names.txt",
 			"keys":
 				[
 					"first_name",
@@ -23,6 +23,294 @@
 			"attributes":
 				[
 
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Allergies",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "data_files/allergy_names.txt",
+						"attr": "item"
+					},
+					{
+						"file": "data_files/allergy_severity.txt",
+						"attr": "severity"
+					}
+				],
+			"outfile" : "data_files/allergies.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"item"
+				],
+			"attributes":
+				[
+					"item",
+					"severity"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Caregivers",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/addresses.txt",
+						"attr": "address"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "city"
+					},
+					{
+						"file": "data_files/countries.txt",
+						"attr": "country"
+					},
+					{
+						"file": "data_files/zips.txt",
+						"attr": "post_code"
+					}
+				],
+			"outfile" : "data_files/caregivers.txt",
+			"keys":
+				[
+					"ssn"
+				],
+			"attributes":
+				[
+					"address",
+					"city",
+					"country",
+					"post_code"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Clinics",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "name"
+					},
+					{
+						"file": "data_files/addresses.txt",
+						"attr": "address"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "city"
+					},
+					{
+						"file": "data_files/countries.txt",
+						"attr": "country"
+					},
+					{
+						"file": "data_files/zips.txt",
+						"attr": "post_code"
+					},
+					{
+						"file": "data_files/full_names.txt",
+						"attr": "hours"
+					},
+					{
+						"file": "data_files/specialties.txt",
+						"attr": "specialty"
+					}
+				],
+			"outfile" : "data_files/clinics.txt",
+			"keys":
+				[
+					"name",
+					"city"
+
+				],
+			"attributes":
+				[
+					"address",
+					"country",
+					"post_code",
+					"hours",
+					"specialty"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Doctor",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/specialties.txt",
+						"attr": "specialty"
+					}
+				],
+			"outfile" : "data_files/doctors.txt",
+			"keys":
+				[
+					"ssn"
+
+				],
+			"attributes":
+				[
+					"specialty"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Hospitals",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "name"
+					},
+					{
+						"file": "data_files/addresses.txt",
+						"attr": "address"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "city"
+					},
+					{
+						"file": "data_files/countries.txt",
+						"attr": "country"
+					},
+					{
+						"file": "data_files/zips.txt",
+						"attr": "post_code"
+					},
+					{
+						"file": "data_files/full_names.txt",
+						"attr": "hours"
+					},
+					{
+						"file": "data_files/specialties.txt",
+						"attr": "specialty"
+					}
+				],
+			"outfile" : "data_files/hospitals.txt",
+			"keys":
+				[
+					"name",
+					"city"
+
+				],
+			"attributes":
+				[
+					"address",
+					"country",
+					"post_code",
+					"hours",
+					"specialty"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Lab_Results",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "data_files/ssns.txt",
+						"attr": "code"
+					},
+					{
+						"file": "data_files/dates.txt",
+						"attr": "lab_date"
+					}
+				],
+			"outfile" : "data_files/lab_results.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"code",
+					"lab_date"
+				],
+			"attributes":
+				[
+					"notes"
+
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Nurse",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/specialties.txt",
+						"attr": "specialty"
+					}
+				],
+			"outfile" : "data_files/nurses.txt",
+			"keys":
+				[
+					"ssn"
+				],
+			"attributes":
+				[
+					"specialty"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Patient",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/addresses.txt",
+						"attr": "address"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "city"
+					},
+					{
+						"file": "data_files/countries.txt",
+						"attr": "country"
+					},
+					{
+						"file": "data_files/zips.txt",
+						"attr": "post_code"
+					}
+				],
+			"outfile" : "data_files/patients.txt",
+			"keys":
+				[
+					"ssn"
+				],
+			"attributes":
+				[
+					"address",
+					"city",
+					"country",
+					"post_code"
 				],
 			"num" : 10000
 		}
