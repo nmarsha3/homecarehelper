@@ -1,16 +1,16 @@
 <?php
 include "config.php";
-echo "included config";
+#echo "included config";
 
 #if (isset($_POST['submit-button'])){
 
-echo "in php";
+#echo "in php";
 $code = "not_set_yet";
 
 if(isset($_POST['input-code'])){
    
    $code = mysqli_real_escape_string($con, $_POST['input-code']);
-   echo $code;
+   #echo $code;
 
 }
 #$link = mysqli_connect('localhost', 'mrauch2', 'frc254') or die ('died');
@@ -22,8 +22,8 @@ mysqli_stmt_bind_param($stmt, "s", $code);
 mysqli_stmt_execute($stmt);
 mysqli_stmt_bind_result($stmt, $code);
 
-echo mysqli_stmt_fetch($stmt);
-echo $code;
+#echo mysqli_stmt_fetch($stmt);
+#echo $code;
 
 #}
 
@@ -86,8 +86,13 @@ echo $code;
                     <input type="submit" value="Submit" id="submit-button">
                </form>
 				</div>
+         <?php
+          mysqli_stmt_fetch($stmt);
+          echo $code;
+        ?>
 
-			</div>
+         </div>
+
 
 		</div>
 	</div>
