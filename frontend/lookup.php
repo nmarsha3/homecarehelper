@@ -2,30 +2,30 @@
 include "config.php";
 echo "included config";
 
-if (isset($_POST['submit-button'])){
+#if (isset($_POST['submit-button'])){
 
 echo "in php";
 $code = "not_set_yet";
 
 if(isset($_POST['input-code'])){
    
-   $code = mysqli_real_escape_string($con, $_POST['input_code']);
+   $code = mysqli_real_escape_string($con, $_POST['input-code']);
    echo $code;
 
 }
+#$link = mysqli_connect('localhost', 'mrauch2', 'frc254') or die ('died');
 
-// $link = mysqli_connect('localhost', 'mrauch2', 'frc254') or die ('died');
+#mysqli_select_db($link, 'mrauch2');
 
-// mysqli_select_db($link, 'mrauch2');
+$stmt = mysqli_prepare($con, "select name from Procedures where code = ?");
+mysqli_stmt_bind_param($stmt, "s", $code);
+mysqli_stmt_execute($stmt);
+mysqli_stmt_bind_result($stmt, $code);
 
-// $stmt = mysqli_prepare($link, "select name from Procedures where code = ?");
-// mysqli_stmt_bind_param($stmt, "s", $code);
-// mysqli_stmt_execute($stmt);
-// mysqli_stmt_bind_result($stmt, $code);
+echo mysqli_stmt_fetch($stmt);
+echo $code;
 
-// echo "test";
-
-}
+#}
 
 ?>
 
