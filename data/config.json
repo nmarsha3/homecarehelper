@@ -58,6 +58,7 @@
 		},
 		{
 			"table_name": "Caregivers",
+			"isPerson": "True",
 			"infiles" : 
 				[
 					{
@@ -147,6 +148,7 @@
 		},
 		{
 			"table_name": "Doctor",
+			"isPerson" : "True",
 			"infiles" : 
 				[
 					{
@@ -253,6 +255,7 @@
 		},
 		{
 			"table_name": "Nurse",
+			"isPerson" : "True",
 			"infiles" : 
 				[
 					{
@@ -277,6 +280,7 @@
 		},
 		{
 			"table_name": "Patient",
+			"isPerson" : "True",
 			"infiles" : 
 				[
 					{

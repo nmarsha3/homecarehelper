@@ -6,26 +6,14 @@ import csv
 import json
 import random
 
+USED_SSNS_FILE = 'used_ssns.txt'
+USED_SSNS = None
+
 def usage(exit_code=0):
    # TODO: fill this in with real usage info
    progname = os.path.basename(sys.argv[0])
    print(f'''Usage: {progname} [CONFIG_FILE]''')
    sys.exit(exit_code)
-
-
-def readCSV(filename):
-   '''Reads in a specified CSV file and returns the desired attributes from the dataset???
-      Expects one row of titles with the names of each attribute column'''
-   
-   # TODO: make this work, but i think the return value we want is something like:
-   #        {"attr1" : [elements], "attr2" [elements], ...}
-   with open(filename, 'r') as inFile:
-      reader = csv.reader(inFile, delimiter=',')
-      headers = next(reader)
-
-
-   # I think then where this function is called, we'll combine the dict entries into one dict with all the data
-
 
 def readConfigFile(filename):
    '''Reads in a JSON file specifying what data needs to be generated and with what attributes'''
@@ -56,7 +44,7 @@ def readDataFile(filename, attribute, data):
 
 
    
-def generateData(attributes, keys, data, num=100, outfile='output.txt'):
+def generateData(attributes, keys, data, num=100, outfile='output.txt', isPerson=False):
    '''Generates new, random data by combining the provided sets of attribute data
          attributes = List of desired attribute columns in final dataset
          keys = List of the attributes that are keys(must be unique)
@@ -66,6 +54,8 @@ def generateData(attributes, keys, data, num=100, outfile='output.txt'):
 
    if attributes is None or keys is None or data is None:
       return
+
+   global USED_SSNS
 
    if len(keys) > 3:
       print('Error: script unable to generate data with more than 3 keys:', keys)
@@ -142,13 +132,21 @@ def generateData(attributes, keys, data, num=100, outfile='output.txt'):
 
          original_size = len(keyset)
 
+         ssn = None
+
          for key in keys:
-            k.append(str(random.choice(data[key])))
+            entry = str(random.choice(data[key]))
+            k.append(entry)
+            if 'ssn' in key: # Keep a record of any ssns used
+               ssn = entry
+
          k = tuple(k)
          keyset.add(k)
 
          if len(keyset) > original_size:
             iterations = 0
+            if isPerson:
+               USED_SSNS.write(entry + '\n')
          else:
             iterations += 1 # count how many iterations since last addition
 
@@ -183,6 +181,15 @@ def main():
    # Read in configuration
    config = readConfigFile(sys.argv[1])
 
+   # Used SSNS stuff for people
+   global USED_SSNS, USED_SSNS_FILE
+
+   # Empty the file if it exists already
+   if os.path.exists(USED_SSNS_FILE):
+      os.remove(USED_SSNS_FILE)
+
+   USED_SSNS = open(USED_SSNS_FILE, 'w')
+
    # Loop through configuration file and generate data for each table accordingly
    for t in config['toGenerate']:
       name = t['table_name']
@@ -197,7 +204,13 @@ def main():
 
       outfile = t['outfile']
 
-      generateData(t['attributes'], t['keys'], data, t['num'], outfile)
+      if 'isPerson' in t:
+         isPerson = True
+      else:
+         isPerson = False
+
+
+      generateData(t['attributes'], t['keys'], data, t['num'], outfile, isPerson)
 
 
 
