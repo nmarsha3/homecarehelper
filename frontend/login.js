@@ -16,14 +16,27 @@ function getFormInfo(){
     console.log('entered getFormInfo');
 
     // get username
-    var input_username = document.getElementById('input-username').value;
-    console.log("username = ", input_username);
+    var input_ssn = document.getElementById('input-ssn').value;
+    console.log("username = ", input_ssn);
 
-    // get password
-    var input_password = document.getElementById('input-password').value;
-    console.log("password = ", input_password);
+    // Query Database
+    queryDatabase(input_ssn);
 
     // Redirect to our main.html
     window.open("./main.html");
+
+}
+
+function queryDatabase(query){
+       console.log('entered queryDatabase with input: ', query);
+
+           $(document).ready(function() {
+                      $.ajax({
+                         url: "http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/login_handler.php?input-code=" + query, 
+                         success: function(result){
+                            $("#div1").html(result);
+                         }
+                      })
+           });
 
 }
