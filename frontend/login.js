@@ -34,7 +34,7 @@ function queryDatabase(query){
                       $.ajax({
                          url: "http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/login_handler.php?input-code=" + query, 
                          success: function(result){
-                            $("#div1").html(result);
+                            console.log('result: ', result);
                          }
                       })
            });
