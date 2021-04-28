@@ -27,42 +27,12 @@
 			"num" : 10000
 		},
 		{
-			"table_name": "Allergies",
-			"infiles" : 
-				[
-					{
-						"file": "data_files/ssns.txt",
-						"attr": "patient_ssn"
-					},
-					{
-						"file": "data_files/allergy_names.txt",
-						"attr": "item"
-					},
-					{
-						"file": "data_files/allergy_severity.txt",
-						"attr": "severity"
-					}
-				],
-			"outfile" : "data_files/allergies.txt",
-			"keys":
-				[
-					"patient_ssn",
-					"item"
-				],
-			"attributes":
-				[
-					"item",
-					"severity"
-				],
-			"num" : 10000
-		},
-		{
 			"table_name": "Caregivers",
 			"isPerson": "True",
 			"infiles" : 
 				[
 					{
-						"file": "data_files/ssns.txt",
+						"file": "data_files/ssns_1.txt",
 						"attr": "ssn"
 					},
 					{
@@ -97,62 +67,12 @@
 			"num" : 10000
 		},
 		{
-			"table_name": "Clinics",
-			"infiles" : 
-				[
-					{
-						"file": "data_files/hospital_names.txt",
-						"attr": "name"
-					},
-					{
-						"file": "data_files/addresses.txt",
-						"attr": "address"
-					},
-					{
-						"file": "data_files/cities.txt",
-						"attr": "city"
-					},
-					{
-						"file": "data_files/countries.txt",
-						"attr": "country"
-					},
-					{
-						"file": "data_files/zips.txt",
-						"attr": "post_code"
-					},
-					{
-						"file": "data_files/full_names.txt",
-						"attr": "hours"
-					},
-					{
-						"file": "data_files/specialties.txt",
-						"attr": "specialty"
-					}
-				],
-			"outfile" : "data_files/clinics.txt",
-			"keys":
-				[
-					"name",
-					"city"
-
-				],
-			"attributes":
-				[
-					"address",
-					"country",
-					"post_code",
-					"hours",
-					"specialty"
-				],
-			"num" : 10000
-		},
-		{
 			"table_name": "Doctor",
 			"isPerson" : "True",
 			"infiles" : 
 				[
 					{
-						"file": "data_files/ssns.txt",
+						"file": "data_files/ssns_2.txt",
 						"attr": "ssn"
 					},
 					{
@@ -173,93 +93,12 @@
 			"num" : 10000
 		},
 		{
-			"table_name": "Hospitals",
-			"infiles" : 
-				[
-					{
-						"file": "data_files/hospital_names.txt",
-						"attr": "name"
-					},
-					{
-						"file": "data_files/addresses.txt",
-						"attr": "address"
-					},
-					{
-						"file": "data_files/cities.txt",
-						"attr": "city"
-					},
-					{
-						"file": "data_files/countries.txt",
-						"attr": "country"
-					},
-					{
-						"file": "data_files/zips.txt",
-						"attr": "post_code"
-					},
-					{
-						"file": "data_files/full_names.txt",
-						"attr": "hours"
-					},
-					{
-						"file": "data_files/specialties.txt",
-						"attr": "specialty"
-					}
-				],
-			"outfile" : "data_files/hospitals.txt",
-			"keys":
-				[
-					"name",
-					"city"
-
-				],
-			"attributes":
-				[
-					"address",
-					"country",
-					"post_code",
-					"hours",
-					"specialty"
-				],
-			"num" : 10000
-		},
-		{
-			"table_name": "Lab_Results",
-			"infiles" : 
-				[
-					{
-						"file": "data_files/ssns.txt",
-						"attr": "patient_ssn"
-					},
-					{
-						"file": "data_files/ssns.txt",
-						"attr": "code"
-					},
-					{
-						"file": "data_files/dates.txt",
-						"attr": "lab_date"
-					}
-				],
-			"outfile" : "data_files/lab_results.txt",
-			"keys":
-				[
-					"patient_ssn",
-					"code",
-					"lab_date"
-				],
-			"attributes":
-				[
-					"notes"
-
-				],
-			"num" : 10000
-		},
-		{
 			"table_name": "Nurse",
 			"isPerson" : "True",
 			"infiles" : 
 				[
 					{
-						"file": "data_files/ssns.txt",
+						"file": "data_files/ssns_3.txt",
 						"attr": "ssn"
 					},
 					{
@@ -284,7 +123,7 @@
 			"infiles" : 
 				[
 					{
-						"file": "data_files/ssns.txt",
+						"file": "data_files/ssns_4.txt",
 						"attr": "ssn"
 					},
 					{
@@ -317,6 +156,330 @@
 					"post_code"
 				],
 			"num" : 10000
+		},
+		{
+			"table_name": "People",
+			"infiles" : 
+				[
+					{
+						"file": "used_ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/full_names.txt",
+						"attr": "name"
+					},
+					{
+						"file": "data_files/dates.txt",
+						"attr": "birthday"
+					}
+				],
+			"outfile" : "data_files/people.txt",
+			"keys":
+				[
+					"ssn"
+				],
+			"attributes":
+				[
+					"name",
+					"birthday"
+				],
+			"num" : 40000
+		},
+		{
+			"table_name": "Allergies",
+			"infiles" : 
+				[
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "data_files/allergy_names.txt",
+						"attr": "item"
+					},
+					{
+						"file": "data_files/allergy_severity.txt",
+						"attr": "severity"
+					}
+				],
+			"outfile" : "data_files/allergies.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"item"
+				],
+			"attributes":
+				[
+					"severity"
+				],
+			"num" : 1000
+		},
+		{
+			"table_name": "Clinics",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "name"
+					},
+					{
+						"file": "data_files/addresses.txt",
+						"attr": "address"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "city"
+					},
+					{
+						"file": "data_files/countries.txt",
+						"attr": "country"
+					},
+					{
+						"file": "data_files/zips.txt",
+						"attr": "post_code"
+					},
+					{
+						"file": "data_files/hours.txt",
+						"attr": "hours"
+					},
+					{
+						"file": "data_files/specialties.txt",
+						"attr": "specialty"
+					}
+				],
+			"outfile" : "data_files/clinics.txt",
+			"keys":
+				[
+					"name",
+					"city"
+
+				],
+			"attributes":
+				[
+					"address",
+					"country",
+					"post_code",
+					"hours",
+					"specialty"
+				],
+			"num" : 1000
+		},
+		{
+			"table_name": "Hospitals",
+			"infiles" : 
+				[
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "name"
+					},
+					{
+						"file": "data_files/addresses.txt",
+						"attr": "address"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "city"
+					},
+					{
+						"file": "data_files/countries.txt",
+						"attr": "country"
+					},
+					{
+						"file": "data_files/zips.txt",
+						"attr": "post_code"
+					},
+					{
+						"file": "data_files/hours.txt",
+						"attr": "hours"
+					},
+					{
+						"file": "data_files/specialties.txt",
+						"attr": "specialty"
+					}
+				],
+			"outfile" : "data_files/hospitals.txt",
+			"keys":
+				[
+					"name",
+					"city"
+
+				],
+			"attributes":
+				[
+					"address",
+					"country",
+					"post_code",
+					"hours",
+					"specialty"
+				],
+			"num" : 1000
+		},
+		{
+			"table_name": "Lab_Results",
+			"infiles" : 
+				[
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "data_files/ssns.txt",
+						"attr": "code"
+					},
+					{
+						"file": "data_files/dates.txt",
+						"attr": "lab_date"
+					},
+					{
+						"file": "data_files/lab_notes.txt",
+						"attr": "notes"
+					}
+				],
+			"outfile" : "data_files/lab_results.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"code",
+					"lab_date"
+				],
+			"attributes":
+				[
+					"notes"
+
+				],
+			"num" : 1000
+		},
+		{
+			"table_name": "Phones",
+			"infiles" : 
+				[
+					{
+						"file": "used_ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/phones.txt",
+						"attr": "number"
+					}
+				],
+			"outfile" : "data_files/people_phones.txt",
+			"keys":
+				[
+					"ssn"
+				],
+			"attributes":
+				[
+					"number"
+				],
+			"num" : 40000
+		},
+		{
+			"table_name": "Prescriptions",
+			"infiles" : 
+				[
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "used_doctor_ssns.txt",
+						"attr": "doctor_ssn"
+					},
+					{
+						"file": "used_ssns.txt",
+						"attr": "medicine"
+					},
+					{
+						"file": "data_files/dates.txt",
+						"attr": "start_date"
+					},
+					{
+						"file": "data_files/dates.txt",
+						"attr": "end_date"
+					},
+					{
+						"file": "data_files/hours.txt",
+						"attr": "times_taken"
+					},
+					{
+						"file": "data_files/prescription_notes.txt",
+						"attr": "notes"
+					}
+				],
+			"outfile" : "data_files/prescriptions.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"doctor_ssn",
+					"medicine",
+					"start_date",
+					"end_date"
+				],
+			"attributes":
+				[
+					"times_taken",
+					"notes"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Treats",
+			"infiles" : 
+				[
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "used_doctor_ssns.txt",
+						"attr": "doctor_ssn"
+					},
+					{
+						"file": "data_files/diagnoses_codes.txt",
+						"attr": "diagnosis_code"
+					}
+				],
+			"outfile" : "data_files/treats.txt",
+			"keys":
+				[
+					"doctor_ssn",
+					"patient_ssn",
+					"diagnosis_code"
+				],
+			"attributes":
+				[
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Works_At",
+			"infiles" : 
+				[
+					{
+						"file": "used_ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "hospital_name"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "hospital_city"
+					}
+				],
+			"outfile" : "data_files/works_at.txt",
+			"keys":
+				[
+					"ssn",
+					"hospital_name",
+					"hospital_city"
+				],
+			"attributes":
+				[
+				],
+			"num" : 40000
 		}
 	]
 }
