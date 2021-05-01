@@ -1,31 +1,7 @@
 <?php
 include "config.php";
-#echo "included config";
 
-#if (isset($_POST['submit-button'])){
-
-#echo "in php";
-$ssn = "not_set_yet";
-
-if(isset($_POST['input-ssn'])){
-   
-   $ssn = mysqli_real_escape_string($con, $_POST['input-ssn']);
-   #echo $code;
-
-}
-#$link = mysqli_connect('localhost', 'mrauch2', 'frc254') or die ('died');
-
-#mysqli_select_db($link, 'mrauch2');
-
-$stmt = mysqli_prepare($con, "select name from users where ssn = ?");
-mysqli_stmt_bind_param($stmt, "s", $ssn);
-mysqli_stmt_execute($stmt);
-mysqli_stmt_bind_result($stmt, $ssn);
-
-#echo mysqli_stmt_fetch($stmt);
-#echo $code;
-
-#}
+$ssn = $_GET['input-ssn'];
 
 ?>
 
@@ -84,22 +60,72 @@ mysqli_stmt_bind_result($stmt, $ssn);
                 <p>Hello!</p>
 				</div>
             <div class="col-sm-6">
-                <p>SSN: </p>
+                <p>SSN: <?php echo "$ssn"?></p>
 				</div>
             <div class="col-sm-6">
-                <p>Address: </p>
+                <p>First Name: 
+                    <?php
+                        
+                        $stmt1 = mysqli_prepare($con, "select first_name from People where ssn=?");
+                        mysqli_stmt_bind_param($stmt1, "s", $ssn);
+                        mysqli_stmt_execute($stmt1);
+                        mysqli_stmt_bind_result($stmt1, $fn);
+                        mysqli_stmt_fetch($stmt1);
+                        printf("%s\n", $fn);
+                        mysqli_stmt_close($stmt1);
+
+
+                    ?>
+                </p>
 				</div>
             <div class="col-sm-6">
-                <p>City: </p>
+                <p>Last Name: 
+                    <?php
+                        
+                        $stmt2 = mysqli_prepare($con, "select last_name from People where ssn=?");
+                        mysqli_stmt_bind_param($stmt2, "s", $ssn);
+                        mysqli_stmt_execute($stmt2);
+                        mysqli_stmt_bind_result($stmt2, $ln);
+                        mysqli_stmt_fetch($stmt2);
+                        printf("%s\n", $ln);
+                        mysqli_stmt_close($stmt2);
+                        
+
+                    ?>
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <p>Address: 
+
+                    <?php
+                        
+                        $stmt3 = mysqli_prepare($con, "select address, city, country from Patient where ssn=?");
+                        mysqli_stmt_bind_param($stmt3, "s", $ssn);
+                        mysqli_stmt_execute($stmt3);
+                        mysqli_stmt_bind_result($stmt3, $addr, $city, $country);
+                        mysqli_stmt_fetch($stmt3);
+                        printf("%s, %s, %s\n", $addr, $city, $country);
+                        mysqli_stmt_close($stmt3);
+
+                    ?>    
+
+                </p>
 				</div>
             <div class="col-sm-6">
-                <p>Country: </p>
-				</div>
-            <div class="col-sm-6">
-                <p>Zip: </p>
-				</div>
-            <div class="col-sm-6">
-                <p>Phone: </p>
+                <p>Phone: 
+                    <?php
+
+                        $stmt4 = mysqli_prepare($con, "select number from Phone where ssn=?");
+                        mysqli_stmt_bind_param($stmt4, "s", $ssn);
+                        mysqli_stmt_execute($stmt4);
+                        mysqli_stmt_bind_result($stmt4, $phone);
+                        mysqli_stmt_fetch($stmt4);
+                        printf("%s\n", $phone);
+                        mysqli_stmt_close($stmt4);
+
+                    ?>
+
+                </p>
 				</div>
             <div class="col-sm-6">
                 <form method="post" action="">
