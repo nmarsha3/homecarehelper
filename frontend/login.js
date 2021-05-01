@@ -32,7 +32,8 @@ function getFormInfo(){
     queryDatabase(input_ssn);
 
     // Redirect to our main.html
-    window.open("./main.html?ssn="+ input_ssn);
+    window.open("./main.html?"+ input_ssn);
+
 
 }
 
