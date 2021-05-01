@@ -17,11 +17,11 @@
 						"attr": "medicine"
 					},
 					{
-						"file": "data_files/dates.txt",
+						"file": "data_files/start_dates.txt",
 						"attr": "start_date"
 					},
 					{
-						"file": "data_files/dates.txt",
+						"file": "data_files/end_dates.txt",
 						"attr": "end_date"
 					},
 					{
@@ -48,6 +48,35 @@
 					"notes"
 				],
 			"num" : 10000
+		},
+		{
+			"table_name": "Works_At",
+			"infiles" : 
+				[
+					{
+						"file": "used_ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "hospital_name"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "hospital_city"
+					}
+				],
+			"outfile" : "data_files/works_at.txt",
+			"keys":
+				[
+					"ssn"
+				],
+			"attributes":
+				[
+					"hospital_name",
+					"hospital_city"
+				],
+			"num" : 40000
 		}
 	]
 }
