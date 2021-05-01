@@ -1,9 +1,9 @@
-console.log('page load - entered login.js');
+console.log('page load - entered main.js');
 
-var submitButton = document.getElementById("submit-button");
-submitButton.onmouseup = getFormInfo;
-var newButton = document.getElementById("new-button");
-newButton.onmouseup = newUser;
+//var submitButton = document.getElementById("submit-button");
+//submitButton.onmouseup = getFormInfo;
+//var newButton = document.getElementById("new-button");
+//newButton.onmouseup = newUser;
 //var clearButton = document.getElementById('bsr-clear-button');
 //clearButton.onmouseup = clearForm;
 
@@ -14,12 +14,13 @@ function clearForm(){
 
 }
 
-function newUser(){
+/*function newUser(){
 
    console.log("entered newUser");
    window.open("./new_user.html");
 
-}
+}*/
+
 
 function getFormInfo(){
     console.log('entered getFormInfo');
