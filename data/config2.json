@@ -1,0 +1,30 @@
+{
+	"toGenerate" : [
+		{
+			"table_name": "Takes_Care_Of",
+			"infiles" : 
+				[
+					{
+						"file": "used_caregiver_ssns.txt",
+						"attr": "caregiver_ssn"
+					},
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					}
+				],
+			"outfile" : "data_files/takes_care_of.txt",
+			"keys":
+				[
+					"caregiver_ssn",
+					"patient_ssn"
+
+				],
+			"attributes":
+				[
+
+				],
+			"num" : 10000
+		}
+	]
+}

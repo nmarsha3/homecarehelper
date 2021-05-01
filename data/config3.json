@@ -1,0 +1,82 @@
+{
+	"toGenerate" : [
+		{
+			"table_name": "Prescriptions",
+			"infiles" : 
+				[
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "used_doctor_ssns.txt",
+						"attr": "doctor_ssn"
+					},
+					{
+						"file": "data_files/medications.txt",
+						"attr": "medicine"
+					},
+					{
+						"file": "data_files/start_dates.txt",
+						"attr": "start_date"
+					},
+					{
+						"file": "data_files/end_dates.txt",
+						"attr": "end_date"
+					},
+					{
+						"file": "data_files/times_taken.txt",
+						"attr": "times_taken"
+					},
+					{
+						"file": "data_files/prescription_notes.txt",
+						"attr": "notes"
+					}
+				],
+			"outfile" : "data_files/prescriptions.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"doctor_ssn",
+					"medicine",
+					"start_date",
+					"end_date"
+				],
+			"attributes":
+				[
+					"times_taken",
+					"notes"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Works_At",
+			"infiles" : 
+				[
+					{
+						"file": "used_ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "hospital_name"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "hospital_city"
+					}
+				],
+			"outfile" : "data_files/works_at.txt",
+			"keys":
+				[
+					"ssn"
+				],
+			"attributes":
+				[
+					"hospital_name",
+					"hospital_city"
+				],
+			"num" : 40000
+		}
+	]
+}

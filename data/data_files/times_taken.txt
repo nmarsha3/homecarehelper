@@ -1,0 +1,7 @@
+breakfast
+lunch 
+dinner
+breakfast, lunch
+breakfast, dinner
+lunch, dinner
+breakfast, lunch, dinner
