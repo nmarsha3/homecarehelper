@@ -1,0 +1,53 @@
+{
+	"toGenerate" : [
+		{
+			"table_name": "Prescriptions",
+			"infiles" : 
+				[
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "used_doctor_ssns.txt",
+						"attr": "doctor_ssn"
+					},
+					{
+						"file": "data_files/medications.txt",
+						"attr": "medicine"
+					},
+					{
+						"file": "data_files/dates.txt",
+						"attr": "start_date"
+					},
+					{
+						"file": "data_files/dates.txt",
+						"attr": "end_date"
+					},
+					{
+						"file": "data_files/times_taken.txt",
+						"attr": "times_taken"
+					},
+					{
+						"file": "data_files/prescription_notes.txt",
+						"attr": "notes"
+					}
+				],
+			"outfile" : "data_files/prescriptions.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"doctor_ssn",
+					"medicine",
+					"start_date",
+					"end_date"
+				],
+			"attributes":
+				[
+					"times_taken",
+					"notes"
+				],
+			"num" : 10000
+		}
+	]
+}
