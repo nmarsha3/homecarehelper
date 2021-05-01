@@ -6,8 +6,9 @@ import csv
 import json
 import random
 
-USED_SSNS_FILE = 'used_ssns.txt'
+
 USED_SSNS = None
+USED_SSNS_FILE = 'used_ssns.txt'
 
 def usage(exit_code=0):
    # TODO: fill this in with real usage info
@@ -44,7 +45,7 @@ def readDataFile(filename, attribute, data):
 
 
    
-def generateData(attributes, keys, data, num=100, outfile='output.txt', isPerson=False):
+def generateData(attributes, keys, data, num=100, outfile='output.txt', isPerson=False, saveSSNfile=False, SSNfilename=None, allPeople=False):
    '''Generates new, random data by combining the provided sets of attribute data
          attributes = List of desired attribute columns in final dataset
          keys = List of the attributes that are keys(must be unique)
@@ -56,10 +57,6 @@ def generateData(attributes, keys, data, num=100, outfile='output.txt', isPerson
       return
 
    global USED_SSNS
-
-   if len(keys) > 3:
-      print('Error: script unable to generate data with more than 3 keys:', keys)
-      return
 
    # Check that attributes and keys exist
    for key in keys:
@@ -74,87 +71,60 @@ def generateData(attributes, keys, data, num=100, outfile='output.txt', isPerson
 
    numGenerated = 0
 
+   if os.path.exists(outfile):
+      os.remove(outfile)
+
    with open(outfile, 'w') as outFile:
 
       keyset = set()
 
       # Generate unique key tuples and use them as keys in a set
 
-      # BRUTE FORCE APPROACH
-
-      # NOTE: only generates a limited number to keep runtime down
       done = False
-      '''
-
-      if len(keys) == 1:
-         for i in data[keys[0]]:
-            keyset.add((i,))
-
-            numGenerated += 1
-            if numGenerated >= num:
-               done = True
-               break
-
-      elif len(keys) == 2:
-         for i in data[keys[0]]:
-            for j in data[keys[1]]:
-               keyset.add((i,j))
-
-               numGenerated += 1
-               if numGenerated >= num:
-                  done = True
-                  break
-            if done:
-               break
-
-      elif len(keys) == 3:
-         for i in data[keys[0]]:
-            for j in data[keys[1]]:
-               for k in data[keys[2]]:
-                  keyset.add((i,j,k))
-
-                  numGenerated += 1
-                  if numGenerated >= num:
-                     done = True
-                     break
-               if done:
-                  break
-            if done:
-               break
-
-      '''
 
       # RANDOM approach if we want to avoid only using the first few data points
-      iterations = 0
+      if allPeople: # use all SSNs as keys; no random keys
+         for ssn in data['ssn']:
+            keyset.add((ssn,))
+      else:
+         iterations = 0
 
-      while not done:
-         k = list()
+         SAVE_SSN_FILE = None
+         if saveSSNfile:
+            if os.path.exists(SSNfilename):
+               os.remove(SSNfilename)
+            SAVE_SSN_FILE = open(SSNfilename, 'w+')
 
-         original_size = len(keyset)
+         while not done:
+            k = list()
 
-         ssn = None
+            original_size = len(keyset)
 
-         for key in keys:
-            entry = str(random.choice(data[key]))
-            k.append(entry)
-            if 'ssn' in key: # Keep a record of any ssns used
-               ssn = entry
+            ssn = None
 
-         k = tuple(k)
-         keyset.add(k)
+            for key in keys:
+               entry = str(random.choice(data[key]))
+               k.append(entry)
+               if 'ssn' in key: # Keep a record of any ssns used
+                  ssn = entry
 
-         if len(keyset) > original_size:
-            iterations = 0
-            if isPerson:
-               USED_SSNS.write(entry + '\n')
-         else:
-            iterations += 1 # count how many iterations since last addition
+            k = tuple(k)
+            keyset.add(k)
 
-         if len(keyset) >= num or iterations > 1000:
-            # quit when enough keys generated or 1000 iterations with no addition
-            done = True
+            if len(keyset) > original_size:
+               iterations = 0
+               if isPerson:
+                  USED_SSNS.write(ssn + '\n')
+                  if saveSSNfile:
+                     SAVE_SSN_FILE.write(ssn + '\n')
+            else:
+               iterations += 1 # count how many iterations since last addition
 
+            if len(keyset) >= num or iterations > 1000:
+               # quit when enough keys generated or 1000 iterations with no addition
+               done = True
 
+      print("\tGenerating", len(keyset), "tuples..")
 
          
       # Loop through key tuples
@@ -170,6 +140,9 @@ def generateData(attributes, keys, data, num=100, outfile='output.txt', isPerson
                   elem.append("")
 
          outFile.write('\t'.join(elem) + '\n')
+
+      if saveSSNfile:
+         SAVE_SSN_FILE.close()
          
 
 def main():
@@ -197,6 +170,9 @@ def main():
       print(f'Generating data for table "{name}"...')
       data = {}
 
+      if 'People' in name:
+         USED_SSNS.close()
+
       # Read in all needed data
       for i in t['infiles']:
          readDataFile(i['file'], i['attr'], data)
@@ -208,29 +184,31 @@ def main():
          isPerson = True
       else:
          isPerson = False
+      
+      SSNfilename = None
+      saveSSNfile = False
+      if 'Patient' in name:
+         SSNfilename = 'used_patient_ssns.txt'
+         saveSSNfile = True
+      if 'Doctor' in name:
+         SSNfilename = 'used_doctor_ssns.txt'
+         saveSSNfile = True
+      if 'Nurse' in name:
+         SSNfilename = 'used_nurse_ssns.txt'
+         saveSSNfile = True
+      if 'Caregiver' in name:
+         SSNfilename = 'used_caregiver_ssns.txt'
+         saveSSNfile = True
 
 
-      generateData(t['attributes'], t['keys'], data, t['num'], outfile, isPerson)
+      if 'People' in name or 'Phones' in name or 'Works_At' in name:
+         allPeople = True
+      else:
+         allPeople = False
 
 
+      generateData(t['attributes'], t['keys'], data, t['num'], outfile, isPerson, saveSSNfile, SSNfilename, allPeople)
 
-   # Random test data, but this is the format we're going for:
-   '''
-   attributes = ["SSN", "name", "age", "isSick"]
-
-   data = {
-         "name"   : ["charlie", "melissa", "steven", "james", "john", "mary"],
-         "age"    : [32, 33, 99, 12, 23, 5, 10, 11, 44, 64, 20, 10, 21],
-         "SSN"    : ["123-23-1233","412-22-1111","303-12-4040","202-23-4040", "321-09-8765"],
-         "isSick" : [True, False]
-         }
-         '''
-
-
-   # TODO: generate new random entries
-   #generateData(attributes, data, 15)
-
-   
 
 if __name__ == '__main__':
    main()
