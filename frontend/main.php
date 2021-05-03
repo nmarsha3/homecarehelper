@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script>
-
-var queryString = decodeURIComponent(window.location.search); //parsing 
-queryString = queryString.substring(1); 
-var queries = queryString.split("&"); 
-for (var i = 0; i < queries.length; i++) 
-{ 
-     var ssn = queries[i]; 
-}
-
-document.write(ssn);
-
-</script>
-
-
 <head>
 	<style>
 		body {
@@ -55,11 +40,10 @@ document.write(ssn);
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<ul class="nav navbar-nav">
-                  <script> document.write(ssn); </script>
-                  <li><a href="lookup.html">Lookup</a></li>
+						<li><a href="lookup.html">Lookup</a></li>
 						<li><a href="insert.html">Insert</a></li>
 						<li><a href="update.html">Update</a></li>
-						<li><a href="show_info.php" onclick="location.href=this.href+'?input-ssn='+ssn;return false;">Edit Info</a></li>
+						<li><a href="edit_info.php">Edit Info</a></li>
 					</ul>
 				</ul>
 
