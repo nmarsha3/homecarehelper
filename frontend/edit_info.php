@@ -128,9 +128,7 @@ $ssn = $_GET['input-ssn'];
                 </p>
 				</div>
             <div class="col-sm-6">
-                <form method="post" action="">
-                    <input type="button" value="Edit" id="edit-button">
-                </form>
+                <button onclick="location.href = './new_user.html'" value="Edit" id="edit-button">Edit</button>
 				</div>
 
          </div>
