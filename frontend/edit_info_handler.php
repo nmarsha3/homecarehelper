@@ -30,8 +30,8 @@ $phone = mysqli_real_escape_string($con, $_GET['input-phone']);
 echo $phone;
 
 # TODO: Insert above information into db!!
-$stmt = mysqli_prepare($con, "update People set ssn = ?, first_name = ?, last_name = ?, birthday = ?");
-mysqli_stmt_bind_param($stmt, "ssss", $ssn, $fn, $ln, $bday);
+$stmt = mysqli_prepare($con, "update People set first_name = ?, last_name = ?, birthday = ? where ssn = ?");
+mysqli_stmt_bind_param($stmt, "ssss", $fn, $ln, $bday, $ssn);
 mysqli_stmt_execute($stmt);
 if ($con->query($stmt) === TRUE) {
      echo "New record created successfully";
@@ -40,13 +40,13 @@ if ($con->query($stmt) === TRUE) {
 }
 mysqli_stmt_close($stmt);
 
-$stmt2 = mysqli_prepare($con, "update Patient set ssn = ?, address = ?, city = ?, country = ?, post_code = ?");
-mysqli_stmt_bind_param($stmt2, "sssss", $ssn, $addr, $city, $country, $zip);
+$stmt2 = mysqli_prepare($con, "update Patient set address = ?, city = ?, country = ?, post_code = ? where ssn = ?");
+mysqli_stmt_bind_param($stmt2, "sssss", $addr, $city, $country, $zip, $ssn);
 mysqli_stmt_execute($stmt2);
 mysqli_stmt_close($stmt2);
 
-$stmt3 = mysqli_prepare($con, "update Phone set ssn = ?, number = ?");
-mysqli_stmt_bind_param($stmt3, "ss", $ssn, $phone);
+$stmt3 = mysqli_prepare($con, "update Phone set number = ? where ssn = ?");
+mysqli_stmt_bind_param($stmt3, "ss", $phone, $ssn);
 mysqli_stmt_execute($stmt3);
 mysqli_stmt_close($stmt3);
 

@@ -37,7 +37,7 @@ function getFormInfo(){
     inputIntoDatabase(input_first_name, input_last_name, input_birthday, input_phone, input_ssn, input_address, input_city, input_country, input_zip);
 
     // Redirect to our main.html
-    //window.open("./main.html");
+    window.open("./main.html");
 
 }
 
