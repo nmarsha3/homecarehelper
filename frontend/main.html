@@ -11,7 +11,6 @@ for (var i = 0; i < queries.length; i++)
      var ssn = queries[i]; 
 }
 
-document.write(ssn);
 
 </script>
 
@@ -55,12 +54,12 @@ document.write(ssn);
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<ul class="nav navbar-nav">
-                  <script> document.write(ssn); </script>
                   <li><a href="lookup.html">Lookup</a></li>
 						<li><a href="insert.html">Insert</a></li>
 						<li><a href="update.html">Update</a></li>
 						<li><a href="show_info.php" onclick="location.href=this.href+'?input-ssn='+ssn;return false;">Edit Info</a></li>
 						<li><a href="show_allergies.php" onclick="location.href=this.href+'?input-ssn='+ssn;return false;">Allergies</a></li>
+						<li><a href="nlp.html" onclick="location.href=this.href+'?input-ssn='+ssn;return false;">NLP</a></li>
 					</ul>
 				</ul>
 

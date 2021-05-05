@@ -52,42 +52,18 @@ $ssn = $_GET['input-ssn'];
             mysqli_stmt_execute($stmt1);
 			mysqli_stmt_bind_result($stmt1, $allergy, $severity);
 			
+			echo "<p style='color:white'><font size = '6'><strong>Allergies</strong></font></p>";
+			
 			while(mysqli_stmt_fetch($stmt1)){
-				echo "<p> Item: $allergy
-				echo "<tr>";
-				echo '<td>';
-				echo $allergy;
-				echo '</td>';
-				echo '<td>';
-				echo $severity;
-				echo '</td>';
-
-			
-			
-			<div class="jumbotron">
-			<div class="row">
-            <div class="col-sm-6">
-			
-			?>
-
-				<?php
-					while(mysqli_stmt_fetch($stmt1)){
-						echo "<tr>";
-						echo '<td>';
-						echo $allergy;
-						echo '</td>';
-						echo '<td>';
-						echo $severity;
-						echo '</td>';
-						echo "</tr>";
-					}
-					echo '</table>';
-
-                	mysqli_stmt_close($stmt1);
-                    ?>
-            </div>
-         </div>
-	</div>
+				echo "<div class='jumbotron'>";
+				echo "<div class='row'>";
+            	echo "<div class='col-sm-6'>";
+				echo "<p>Item:     $allergy <br />";
+				echo "Severity: $severity <br /></p>";
+            	echo "</div></div></div>";
+			}
+			mysqli_stmt_close($stmt1);
+		?>
 	<footer class="footer">
 		<div class="container">
 			<hr>
