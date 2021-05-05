@@ -136,6 +136,8 @@ $ssn = $_GET['input-ssn'];
 
 		</div>
 	</div>
+	</div>
+	</div>
 	<footer class="footer">
 		<div class="container">
 			<hr>
