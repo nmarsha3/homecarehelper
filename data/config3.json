@@ -92,14 +92,30 @@
 					},
 					{
 						"file": "data_files/hospital_names.txt",
-						"attr": "hospital_name"
+						"attr": "location_name"
 					},
 					{
 						"file": "data_files/cities.txt",
-						"attr": "hospital_city"
+						"attr": "location_city"
+					},
+					{
+						"file": "data_files/isHospital.txt",
+						"attr": "hospital"
+					},
+					{
+						"file": "data_files/end_dates.txt",
+						"attr": "appointment_date"
+					},
+					{
+						"file": "data_files/appointment_outcomes.txt",
+						"attr": "outcome"
+					},
+					{
+						"file": "data_files/appointment_notes.txt",
+						"attr": "notes"
 					}
 				],
-			"outfile" : "data_files/patient_appointments.txt",
+			"outfile" : "data_files/patient_appointments_hospital.txt",
 			"keys":
 				[
 					"patient_ssn",
@@ -108,37 +124,94 @@
 				],
 			"attributes":
 				[
-					"hospital_name",
-					"hospital_city"
+					"location_name",
+					"location_city",
+					"hospital",
+					"outcome",
+					"notes"
 				],
-			"num" : 40000
-		}
+			"num" : 20000
+		},
 		{
-			"table_name": "Works_At",
+			"table_name": "Patient_Appointment",
 			"infiles" : 
 				[
 					{
-						"file": "used_ssns.txt",
-						"attr": "ssn"
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "used_doctor_ssns.txt",
+						"attr": "doctor_ssn"
 					},
 					{
 						"file": "data_files/hospital_names.txt",
-						"attr": "hospital_name"
+						"attr": "location_name"
 					},
 					{
 						"file": "data_files/cities.txt",
-						"attr": "hospital_city"
+						"attr": "location_city"
+					},
+					{
+						"file": "data_files/isNotHospital.txt",
+						"attr": "hospital"
+					},
+					{
+						"file": "data_files/end_dates.txt",
+						"attr": "appointment_date"
+					},
+					{
+						"file": "data_files/appointment_outcomes.txt",
+						"attr": "outcome"
+					},
+					{
+						"file": "data_files/appointment_notes.txt",
+						"attr": "notes"
 					}
 				],
-			"outfile" : "data_files/works_at.txt",
+			"outfile" : "data_files/patient_appointments_clinic.txt",
 			"keys":
 				[
-					"ssn"
+					"patient_ssn",
+					"doctor_ssn",
+					"appointment_date"
 				],
 			"attributes":
 				[
-					"hospital_name",
-					"hospital_city"
+					"location_name",
+					"location_city",
+					"hospital",
+					"outcome",
+					"notes"
+				],
+			"num" : 10000
+		},
+		{
+			"table_name": "Patient_Diagnosis",
+			"infiles" : 
+				[
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "data_files/diagnoses_codes.txt",
+						"attr": "code"
+					},
+					{
+						"file": "data_files/diagnoses_notes.txt",
+						"attr": "notes"
+					}
+				],
+			"outfile" : "data_files/patient_appointments_clinic.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"code"
+				],
+			"attributes":
+				[
+					"notes"
 				],
 			"num" : 40000
 		}
