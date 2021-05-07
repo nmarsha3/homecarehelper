@@ -77,6 +77,70 @@
 					"hospital_city"
 				],
 			"num" : 40000
+		},
+		{
+			"table_name": "Patient_Appointment",
+			"infiles" : 
+				[
+					{
+						"file": "used_patient_ssns.txt",
+						"attr": "patient_ssn"
+					},
+					{
+						"file": "used_doctor_ssns.txt",
+						"attr": "doctor_ssn"
+					},
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "hospital_name"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "hospital_city"
+					}
+				],
+			"outfile" : "data_files/patient_appointments.txt",
+			"keys":
+				[
+					"patient_ssn",
+					"doctor_ssn",
+					"appointment_date"
+				],
+			"attributes":
+				[
+					"hospital_name",
+					"hospital_city"
+				],
+			"num" : 40000
+		}
+		{
+			"table_name": "Works_At",
+			"infiles" : 
+				[
+					{
+						"file": "used_ssns.txt",
+						"attr": "ssn"
+					},
+					{
+						"file": "data_files/hospital_names.txt",
+						"attr": "hospital_name"
+					},
+					{
+						"file": "data_files/cities.txt",
+						"attr": "hospital_city"
+					}
+				],
+			"outfile" : "data_files/works_at.txt",
+			"keys":
+				[
+					"ssn"
+				],
+			"attributes":
+				[
+					"hospital_name",
+					"hospital_city"
+				],
+			"num" : 40000
 		}
 	]
 }
