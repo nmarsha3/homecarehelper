@@ -1,0 +1,6 @@
+Went well.
+Patient feels ok.
+Patient feels a bit sick.
+Patient head hurts.
+Patient feeling great.
+Patient experiencing severe pain.
