@@ -36,6 +36,8 @@ def main():
    readDataFile('../data_files/ssns.txt', 'ssn', data)
    readDataFile('../data_files/hospital_names.txt', 'hospital', data)
    readDataFile('../data_files/hospital_names.txt', 'clinic', data)
+   readDataFile('../data_files/diagnoses_codes.txt', 'diagnosis_code', data)
+   readDataFile('../data_files/procedure_codes.txt', 'procedure_code', data)
 
    with open(tempfile, 'r') as template, open(outfile, 'w') as output:
       
@@ -46,6 +48,10 @@ def main():
                line = line.replace('(hospital)', str(random.choice(data['hospital'])))
          if '(clinic)' in line:
                line = line.replace('(clinic)', str(random.choice(data['clinic'])))
+         if '(diagnosis_code)' in line:
+               line = line.replace('(diagnosis_code)', str(random.choice(data['diagnosis_code'])))
+         if '(procedure_code)' in line:
+               line = line.replace('(procedure_code)', str(random.choice(data['procedure_code'])))
 
          output.write(line)
 
