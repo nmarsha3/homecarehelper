@@ -28,7 +28,7 @@ function translate(question){
                       $.ajax({
                          url: "http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/nlp.php?input-question=" + question, 
                          success: function(result){
-                            console.log('result: ', result);
+                            $("#div1").html(result);
                          }
                       })
            });

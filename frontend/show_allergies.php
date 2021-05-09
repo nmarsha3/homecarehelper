@@ -1,7 +1,7 @@
 <?php
 include "config.php";
 
-$ssn = $_GET['input-ssn'];
+$ssn = $_GET['input_ssn'];
 
 ?>
 

@@ -1,3 +1,12 @@
+<?php
+include "config.php";
+
+$ssn = $_GET['input_ssn'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<style>
 		body {
@@ -22,7 +31,7 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse">
+   <nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -37,34 +46,26 @@
 		</div>
 	</nav>
 	<div class="container-fluid">
-		<div class="jumbotron">
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="thumbnail">
-						<img class="img img-responsive img-thumbnail"
-							src="https://dlyhjlf6lts50.cloudfront.net/app/uploads/2020/09/what_services_do_in_home_caregivers_provide-1024x683.jpg"
-							alt="This is some text">
-						
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<form action="" method="post">
-							Question: <input type="textbox" id="input-question" name="input-question"/>
-                     <input type="button" value=Submit id="submit-button">
-                  
-                  </form>
-					
-				</div>
-            
-            <div id="div1">
-            
-            </div>
+		<?php
 
+$stmt1 = mysqli_prepare($con, "select name, first_name, last_name, specialty from Treats, Diagnoses, People, Doctor where doctor_ssn = People.ssn and People.ssn = Doctor.ssn and diagnosis_code = code and patient_ssn = ?;");
 
-			</div>
-
-		</div>
-	</div>
+			mysqli_stmt_bind_param($stmt1, "s", $ssn);
+            mysqli_stmt_execute($stmt1);
+			mysqli_stmt_bind_result($stmt1, $name, $fname, $lname, $specialty);
+			
+			echo "<p style='color:white'><font size = '6'><strong>Your Diagnoses</strong></font></p>";
+			
+			while(mysqli_stmt_fetch($stmt1)){
+				echo "<div class='jumbotron'>";
+				echo "<div class='row'>";
+            	echo "<div class='col-sm-6'>";
+				echo "<p><strong> $name </strong><br />";
+				echo "Treated By: Dr. $fname $lname, $specialty <br />";
+            	echo "</div></div></div>";
+			}
+			mysqli_stmt_close($stmt1);
+		?>
 	<footer class="footer">
 		<div class="container">
 			<hr>
@@ -72,7 +73,7 @@
 			<p style=color:snow>2020-03-20</p>
 		</div>
 	</footer>
-	<script src="nlp.js" type="text/javascript"></script>
+   <!--<script src="lookup.js" type="text/javascript"></script> -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -80,4 +81,3 @@
 </body>
 
 </html>
-

@@ -1,3 +1,5 @@
+# !/usr/bin/env/ python3
+
 ### HW2 solution (Spring 2021)
 ### transformer.py
 ###
@@ -222,8 +224,6 @@ class Model(torch.nn.Module):
 
 if __name__ == "__main__":
     
-    print("we entered main")
-
     import argparse, sys
     
     parser = argparse.ArgumentParser()

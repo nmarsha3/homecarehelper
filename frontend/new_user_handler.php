@@ -16,7 +16,7 @@ $ln = mysqli_real_escape_string($con, $_GET['input-last-name']);
 echo $ln;
 $bday = mysqli_real_escape_string($con, $_GET['input-birthday']);
 echo $bday;
-$ssn = mysqli_real_escape_string($con, $_GET['input-ssn']);
+$ssn = mysqli_real_escape_string($con, $_GET['input_ssn']);
 echo $ssn;
 $addr = mysqli_real_escape_string($con, $_GET['input-address']);
 echo $addr;

@@ -25,15 +25,11 @@ function getFormInfo(){
     console.log('entered getFormInfo');
 
     // get username
-    var input_ssn = document.getElementById('input-ssn').value;
-    console.log("username = ", input_ssn);
+    var input_ssn = document.getElementById("input_ssn").value;
+    console.log("ssn = ", input_ssn);
 
     // Query Database
-    queryDatabase(input_ssn);
-
-    // Redirect to our main.html
-    window.open("./main.html?"+ input_ssn);
-
+	queryDatabase(input_ssn);
 
 }
 
@@ -42,11 +38,20 @@ function queryDatabase(query){
 
            $(document).ready(function() {
                       $.ajax({
-                         url: "http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/login_handler.php?input-code=" + query, 
+                         url: "http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/login_handler.php?input_ssn=" + query, 
                          success: function(result){
-                            console.log('result: ', result);
+							 console.log('result: ', result);
+    						// Redirect to our main.html
+							if(result == 0){
+    							window.open("./main_patient.html?"+ query);
+							}
+							if(result == 1){
+    							window.open("./main_doctor.html?"+ query);
+							}
+							if(result == 2){
+    							window.open("./main_caregiver.html?"+ query);
+							}
                          }
                       })
            });
-
 }

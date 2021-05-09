@@ -22,7 +22,7 @@ function getFormInfo(){
     console.log("birthday = ", input_birthday);
     var input_phone = document.getElementById('input-phone').value;
     console.log("phone = ", input_phone);
-    var input_ssn = document.getElementById('input-ssn').value;
+    var input_ssn = document.getElementById('input_ssn').value;
     console.log("ssn = ", input_ssn);
     var input_address = document.getElementById('input-address').value;
     console.log("addr = ", input_address);
@@ -37,7 +37,7 @@ function getFormInfo(){
     inputIntoDatabase(input_first_name, input_last_name, input_birthday, input_phone, input_ssn, input_address, input_city, input_country, input_zip);
 
     // Redirect to our main.html
-    window.open("./main.html");
+    window.open("./login.html");
 
 }
 
@@ -55,7 +55,7 @@ function inputIntoDatabase(first_name, last_name, birthday, phone, ssn, addr, ci
 
        $(document).ready(function() {
                       $.ajax({
-                         url: "http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/new_user_handler.php?input-ssn=" + ssn + "&input-address=" + addr + "&input-city=" + city + "&input-country=" + country + "&input-zip=" + zip + "&input-first-name=" + first_name + "&input-last-name=" + last_name + "&input-birthday=" + birthday + "&input-phone=" + phone, 
+                         url: "http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/new_user_handler.php?input_ssn=" + ssn + "&input-address=" + addr + "&input-city=" + city + "&input-country=" + country + "&input-zip=" + zip + "&input-first-name=" + first_name + "&input-last-name=" + last_name + "&input-birthday=" + birthday + "&input-phone=" + phone, 
                          success: function(result){
                             console.log('result: ', result);
                          }

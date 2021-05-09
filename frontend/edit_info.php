@@ -1,7 +1,7 @@
 <?php
 include "config.php";
 
-$ssn = $_GET['input-ssn'];
+$ssn = $_GET['input_ssn'];
 
 ?>
 
@@ -56,80 +56,55 @@ $ssn = $_GET['input-ssn'];
 						
 					</div>
 				</div>
+
+
             <div class="col-sm-6">
                 <p>Hello!</p>
 				</div>
+			<div class="col-sm-6">
+            <form method="post" action="">
+				<?php
+					echo "SSN: <input type=text class=textbox name=input_ssn id=input_ssn value=$ssn readonly></p>";
+				?>
+            <br>
             <div class="col-sm-6">
-                <p>SSN: <?php echo "$ssn"?></p>
+               First Name: <input type="text" class="textbox" name="input-first-name" id="input-first-name"/>
+            <br>
 				</div>
             <div class="col-sm-6">
-                <p>First Name: 
-                    <?php
-                        
-                        $stmt1 = mysqli_prepare($con, "select first_name from People where ssn=?");
-                        mysqli_stmt_bind_param($stmt1, "s", $ssn);
-                        mysqli_stmt_execute($stmt1);
-                        mysqli_stmt_bind_result($stmt1, $fn);
-                        mysqli_stmt_fetch($stmt1);
-                        printf("%s\n", $fn);
-                        mysqli_stmt_close($stmt1);
-
-
-                    ?>
-                </p>
+               Last Name: <input type="text" class="textbox" name="input-last-name" id="input-last-name"/>
+            <br>
 				</div>
             <div class="col-sm-6">
-                <p>Last Name: 
-                    <?php
-                        
-                        $stmt2 = mysqli_prepare($con, "select last_name from People where ssn=?");
-                        mysqli_stmt_bind_param($stmt2, "s", $ssn);
-                        mysqli_stmt_execute($stmt2);
-                        mysqli_stmt_bind_result($stmt2, $ln);
-                        mysqli_stmt_fetch($stmt2);
-                        printf("%s\n", $ln);
-                        mysqli_stmt_close($stmt2);
-                        
-
-                    ?>
-                </p>
-            </div>
-            <div class="col-sm-6">
-                <p>Address: 
-
-                    <?php
-                        
-                        $stmt3 = mysqli_prepare($con, "select address, city, country from Patient where ssn=?");
-                        mysqli_stmt_bind_param($stmt3, "s", $ssn);
-                        mysqli_stmt_execute($stmt3);
-                        mysqli_stmt_bind_result($stmt3, $addr, $city, $country);
-                        mysqli_stmt_fetch($stmt3);
-                        printf("%s, %s, %s\n", $addr, $city, $country);
-                        mysqli_stmt_close($stmt3);
-
-                    ?>    
-
-                </p>
+               Birthday: <input type="text" class="textbox" name="input-birthday" id="input-birthday"/>
+            <br>
 				</div>
             <div class="col-sm-6">
-                <p>Phone: 
-                    <?php
-
-                        $stmt4 = mysqli_prepare($con, "select number from Phone where ssn=?");
-                        mysqli_stmt_bind_param($stmt4, "s", $ssn);
-                        mysqli_stmt_execute($stmt4);
-                        mysqli_stmt_bind_result($stmt4, $phone);
-                        mysqli_stmt_fetch($stmt4);
-                        printf("%s\n", $phone);
-                        mysqli_stmt_close($stmt4);
-
-                    ?>
-
-                </p>
+               Address: <input type="text" class="textbox" name="input-address" id="input-address"/>
+            <br>
 				</div>
             <div class="col-sm-6">
-                <button onclick="location.href = './new_user.html'" value="Edit" id="edit-button">Edit</button>
+               City: <input type="text" class="textbox" name="input-city" id="input-city"/>
+            <br>
 				</div>
+            <div class="col-sm-6">
+               Country: <input type="text" class="textbox" name="input-country" id="input-country"/>
+            <br>
+				</div>
+            <div class="col-sm-6">
+               Zip: <input type="text" class="textbox" name="input-zip" id="input-zip"/>
+            <br>
+				</div>
+            <br>
+            <div class="col-sm-6">
+               Phone: <input type="text" class="textbox" name="input-phone" id="input-phone"/>
+            <br>
+				</div>
+            <div class="col-sm-6">
+                    <input type="button" value="Submit" id="submit-button">
+				</div>
+            
+          </form>
 
          </div>
 
@@ -143,7 +118,7 @@ $ssn = $_GET['input-ssn'];
 			<p style=color:snow>2020-03-20</p>
 		</div>
 	</footer>
-   <!--<script src="lookup.js" type="text/javascript"></script> -->
+   <script src="edit_info.js" type="text/javascript"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

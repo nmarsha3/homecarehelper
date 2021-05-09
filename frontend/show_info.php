@@ -1,7 +1,7 @@
 <?php
 include "config.php";
 
-$ssn = $_GET['input-ssn'];
+$ssn = $_GET['input_ssn'];
 
 ?>
 
@@ -81,7 +81,6 @@ $ssn = $_GET['input-ssn'];
             <div class="col-sm-6">
                 <p>Last Name: 
                     <?php
-                        
                         $stmt2 = mysqli_prepare($con, "select last_name from People where ssn=?");
                         mysqli_stmt_bind_param($stmt2, "s", $ssn);
                         mysqli_stmt_execute($stmt2);
@@ -128,7 +127,10 @@ $ssn = $_GET['input-ssn'];
                 </p>
 				</div>
             <div class="col-sm-6">
-                <button onclick="location.href = './edit_info.html'" value="Edit" id="edit-button">Edit</button>
+				<?php
+						$ref_string = "<a href=edit_info.php?input_ssn=$ssn>".Edit."</a>";
+						echo $ref_string;
+				?>				
 				</div>
 
          </div>
