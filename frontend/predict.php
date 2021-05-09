@@ -47,41 +47,97 @@ $ssn = $_GET['input_ssn'];
 	</nav>
 	<div class="container-fluid">
 		<?php
+			$dict = array();
+
 			$stmt1 = mysqli_prepare($con, "select item, severity from Allergies where patient_ssn=?");
             mysqli_stmt_bind_param($stmt1, "s", $ssn);
             mysqli_stmt_execute($stmt1);
-			mysqli_stmt_bind_result($stmt1, $allergy, $severity);
+            mysqli_stmt_bind_result($stmt1, $allergy, $severity);
+
+         $sa = array();
+         while(mysqli_stmt_fetch($stmt1)){
+            
+            $sa[$allergy] =  $severity;
+         
+         }
+         
+         mysqli_stmt_close($stmt1);
 			
-			$stmt2 = mysqli_prepare($con, "select medicine from Prescriptions where patient_ssn = ?;");
+			echo "<p style='color:white'><font size = '6'><strong>Predictions</strong></font></p>";
+			echo "<p style='color:white'><font size = '4'>Based on your allergies and medications you may be at risk for the following conditions.</font></p>";
+	
+			$stmt3 = mysqli_prepare($con, "select diagnosis_code, count(*) from Allergies, Treats where item = ? and Allergies.patient_ssn = Treats.patient_ssn group by diagnosis_code order by count(*) desc");
+         
+         foreach($sa as $sev => $al){
+
+            mysqli_stmt_bind_param($stmt3, "s", $allergy);
+            mysqli_stmt_execute($stmt3);
+				mysqli_stmt_bind_result($stmt3, $code, $total);
+            
+            while(mysqli_stmt_fetch($stmt3)){
+                $dict[$code] =  $total;
+				}
+
+         }
+         mysqli_stmt_close($stmt3);
+         
+			$stmt2 = mysqli_prepare($con, "select medicine from Prescriptions where patient_ssn = ?");
             mysqli_stmt_bind_param($stmt2, "s", $ssn);
             mysqli_stmt_execute($stmt2);
-			mysqli_stmt_bind_result($stmt2, $med);
+            mysqli_stmt_bind_result($stmt2, $med);
+
+            $meds = array();
+            while(mysqli_stmt_fetch($stmt2)){
+               
+               $meds[$med] =  1;
+          
+            }
+
+            mysqli_stmt_close($stmt2);
+
 			
-			echo "<p style='color:white'><font size = '6'><strong>Allergies</strong></font></p>";
-			
-			while(mysqli_stmt_fetch($stmt1)){
-				while(mysqli_stmt_fetch($stmt2)){
-					
-					$query3 = "select A.diagnosis_code, (A.c + B.c) as total from (select diagnosis_code, count(*) as c from Prescriptions, Treats where medicine = $med and Prescriptions.patient_ssn = Treats.patient_ssn group by diagnosis_code) A, (select diagnosis_code, count(*) as c from Allergies, Treats where item = $allergy and Allergies.patient_ssn = Treats.patient_ssn group by diagnosis_code) B where A.diagnosis_code = B.diagnosis_code order by total desc;";
-					
-					echo $query3;
-					#$stmt3 = mysqli_prepare($con, $query3);
-					#echo $query3;
-            		#mysqli_stmt_bind_param($stmt3, "s", $ssn);
-            		#mysqli_stmt_execute($stmt3);
-					#mysqli_stmt_bind_result($stmt3, $allergy, $severity);
-				
+			$stmt4 = mysqli_prepare($con, "select diagnosis_code, count(*) from Prescriptions, Treats where medicine = ? and Prescriptions.patient_ssn = Treats.patient_ssn group by diagnosis_code order by count(*) desc");
+            
+         foreach($meds as $med => $k){
+
+            mysqli_stmt_bind_param($stmt4, "s", $med);
+            mysqli_stmt_execute($stmt4);
+            mysqli_stmt_bind_result($stmt4, $code, $total);
+            
+            while(mysqli_stmt_fetch($stmt4)){
+					if(array_key_exists($code, $dict)){
+						$dict[$code] = $dict[$code] + $total;
+					}
+					else{
+						$dict[$code] = $total;
+					}
+                
 				}
-			}	
-				
-				#echo "<div class='jumbotron'>";
-				#echo "<div class='row'>";
-            	#echo "<div class='col-sm-6'>";
-				#echo "<p>Item:     $allergy <br />";
-				#echo "Severity: $severity <br /></p>";
-            	#echo "</div></div></div>";
-			mysqli_stmt_close($stmt1);
-			mysqli_stmt_close($stmt2);
+
+         }
+         mysqli_stmt_close($stmt4);
+         
+         
+         $orig_dict = $dict;
+         arsort($dict, SORT_NUMERIC); 
+         $top3 = array_slice($dict, 0, 3);
+
+			foreach($top3 as $key => $value){
+            
+			   $stmt5 = mysqli_prepare($con, "select name from Diagnoses where code = ?");
+            mysqli_stmt_bind_param($stmt5, "s", $key);
+            mysqli_stmt_execute($stmt5);
+            mysqli_stmt_bind_result($stmt5, $name);
+            mysqli_stmt_fetch($stmt5);
+
+				echo "<div class='jumbotron'>";
+				echo "<div class='row'>";
+            	echo "<div class='col-sm-6'>";
+				echo "<p>$name <br />";
+            	echo "</div></div></div>";
+            mysqli_stmt_close($stmt5);
+         }
+ 
 		?>
 	<footer class="footer">
 		<div class="container">
