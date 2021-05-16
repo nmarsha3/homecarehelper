@@ -6,5 +6,7 @@
 # Project Doc
 http://db.cse.nd.edu/cse30246/homecarehelper/project.html
 
-# Main Page
-http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/main.html
+# Login Page
+http://db.cse.nd.edu/cse30246/homecarehelper/nick/homecarehelper/frontend/login.html  
+Doctor SSN: 100452540  
+Patient SSN: 101733730  
