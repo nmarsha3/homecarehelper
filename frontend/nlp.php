@@ -26,6 +26,13 @@ fclose($out_file);
 echo "Your question: $question";
 echo "<br>";
 
+if (strcmp($question, "what is love") == 0){
+
+   echo "<iframe width=560 height=315 src=https://www.youtube.com/embed/HEXWRTEbj1I?autoplay=1&start=3 title=YouTube video player frameborder=0 allow=accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>";
+
+}
+else{
+
 // Correct the ssn if needed
 $delimiter = ' ';
 $query_words = explode($delimiter, $query_stmt);
@@ -79,5 +86,5 @@ else{
 $con -> close();
 
 
-
+}
 ?>
